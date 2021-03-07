@@ -1,36 +1,82 @@
 <?xml version="1.0" encoding="utf-8"?>
-<search>
-  <entry>
-    <title><![CDATA[Hexo+github pages博客搭建]]></title>
-    <url>%2F2017%2F08%2F12%2FHexo-github-pages%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA%2F</url>
-    <content type="text"><![CDATA[因为怎么搭建的教程已经有很多详细的文档了，所以我就不再写具体的搭建过程。而是写下大致流程、遇到的问题与相关链接推荐。对自己博客搭建做一个记录的同时也希望能对你有所帮助。 先放上：官方文档 主要针对window操作系统，Mac可以参考这里。 安装前准备:安装Node.js Node.js安装教程 安装Gitgit安装教程 注册github账号注册github教程（一）注册github教程（二）注意：github的用户名一经注册就不能改变，所以起的时候尽量起些有意义的，当初注册的时候不知道随便起了一个名字，现在只能一直顶着这个名字了。用户名与昵称(Name)不同，昵称可以变化。 前面的都弄清楚，就可以来搭建博客了 推荐教程史上最详细“截图”搭建Hexo博客并部署到Github 我搭建过程踩到的坑1、创建仓库的时候注意Repository的名字，仓库名称格式必须是【github用户名.github.io】。此处就体现出了起一个好的github用户名的好处，真是一把辛酸泪。2、_config.yml配置的时候，冒号后面一定要有一个空格。当时因为这个问题，走了好多弯路。还有就是hexo在2点几的版本中type: github。之后的版本是type: git。 其它可能出现的问题： 错误：执行$hexo deloy，提示Error Deployer not found：git解决：$ npm install hexo-deployer-git --save 结束语 一般来说按照流程一步一步的走是不会出错的，但是，意外总是发生的猝不及防，如果你不幸踩到了什么奇怪的坑，那就只能Wish you good luck！ 其它参考 《Hexo+github搭建个人博客》github帮助文档MarkDown简单入门]]></content>
+<search> 
+  
+  
+    
+    <entry>
+      <title>Hexo+github pages博客搭建</title>
+      <link href="/2017/08/12/Hexo-github-pages%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/"/>
+      <url>/2017/08/12/Hexo-github-pages%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/</url>
+      
+        <content type="html"><![CDATA[<p> <img src="/2017/08/12/Hexo-github-pages博客搭建/03.jpg" alt="配图"></p><p>因为怎么搭建的教程已经有很多详细的文档了，所以我就不再写具体的搭建过程。而是写下大致流程、遇到的问题与相关链接推荐。对自己博客搭建做一个记录的同时也希望能对你有所帮助。</p><p>先放上：<a href="https://hexo.io/docs/index.html" target="_blank" rel="noopener">官方文档</a></p><p>主要针对window操作系统，Mac可以参考<a href="http://huangnx.com/2016/03/17/BlogPlatByHexoAndGithub/" target="_blank" rel="noopener">这里</a>。</p><hr><h3 id="安装前准备"><a href="#安装前准备" class="headerlink" title="安装前准备:"></a>安装前准备:</h3><h4 id="安装Node-js"><a href="#安装Node-js" class="headerlink" title="安装Node.js"></a>安装Node.js</h4><p> <a href="http://www.runoob.com/nodejs/nodejs-install-setup.html" target="_blank" rel="noopener">Node.js安装教程</a></p><h4 id="安装Git"><a href="#安装Git" class="headerlink" title="安装Git"></a>安装Git</h4><p><a href="http://www.cnblogs.com/shiy/p/6441552.html" target="_blank" rel="noopener">git安装教程</a></p><h4 id="注册github账号"><a href="#注册github账号" class="headerlink" title="注册github账号"></a>注册github账号</h4><p><a href="https://jingyan.baidu.com/article/455a9950abe0ada167277864.html" target="_blank" rel="noopener">注册github教程（一）</a><br><a href="https://jingyan.baidu.com/article/ff42efa93b2ed6c19e22021c.html" target="_blank" rel="noopener">注册github教程（二）</a><br><em>注意：github的用户名一经注册就不能改变，所以起的时候尽量起些有意义的，当初注册的时候不知道随便起了一个名字，现在只能一直顶着这个名字了。用户名与昵称(Name)不同，昵称可以变化。</em></p><hr><p>前面的都弄清楚，就可以来搭建博客了</p><h3 id="推荐教程"><a href="#推荐教程" class="headerlink" title="推荐教程"></a>推荐教程</h3><p><a href="https://jingyan.baidu.com/article/d8072ac47aca0fec95cefd2d.html" target="_blank" rel="noopener">史上最详细“截图”搭建Hexo博客并部署到Github</a></p><h3 id="我搭建过程踩到的坑"><a href="#我搭建过程踩到的坑" class="headerlink" title="我搭建过程踩到的坑"></a>我搭建过程踩到的坑</h3><p>1、创建仓库的时候注意Repository的名字，仓库名称格式必须是【github用户名.github.io】。<em>此处就体现出了起一个好的github用户名的好处，真是一把辛酸泪。</em><br><img src="/2017/08/12/Hexo-github-pages博客搭建/01.png" alt="我的博客仓库"><br>2、_config.yml配置的时候，冒号后面一定要有一个空格。<em>当时因为这个问题，走了好多弯路</em>。还有就是<code>hexo</code>在2点几的版本中<code>type: github</code>。之后的版本是<code>type: git</code>。<br><img src="/2017/08/12/Hexo-github-pages博客搭建/02.png" alt="配置问题.png"></p><h3 id="其它可能出现的问题："><a href="#其它可能出现的问题：" class="headerlink" title="其它可能出现的问题："></a>其它可能出现的问题：</h3><ul><li>错误：执行<code>$hexo deloy</code>，提示<code>Error Deployer not found：git</code><br>解决：<code>$ npm install hexo-deployer-git --save</code></li></ul><h3 id="结束语"><a href="#结束语" class="headerlink" title="结束语"></a>结束语</h3><p> 一般来说按照流程一步一步的走是不会出错的，但是，意外总是发生的猝不及防，如果你不幸踩到了什么奇怪的坑，那就只能Wish you good luck！</p><h3 id="其它参考"><a href="#其它参考" class="headerlink" title="其它参考"></a>其它参考</h3><blockquote><p><a href="http://www.cnblogs.com/dantefung/p/d8c48ba8030bcab7cfc364d423186fee.html" target="_blank" rel="noopener">《Hexo+github搭建个人博客》</a><br><a href="https://help.github.com/" target="_blank" rel="noopener">github帮助文档</a><br><a href="http://www.jianshu.com/p/e1cbc8b98aaf" target="_blank" rel="noopener">MarkDown简单入门</a></p></blockquote>]]></content>
+      
+      
       <categories>
-        <category>工具</category>
+          
+          <category> 工具 </category>
+          
       </categories>
-      <tags>
-        <tag>Hexo</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title><![CDATA[用于测试]]></title>
-    <url>%2F2017%2F08%2F11%2F%E6%B5%8B%E8%AF%95%E6%96%87%E7%AB%A0%2F</url>
-    <content type="text"><![CDATA[测试测试]]></content>
+      
+      
+        <tags>
+            
+            <tag> Hexo </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>用于测试</title>
+      <link href="/2017/08/11/%E6%B5%8B%E8%AF%95%E6%96%87%E7%AB%A0/"/>
+      <url>/2017/08/11/%E6%B5%8B%E8%AF%95%E6%96%87%E7%AB%A0/</url>
+      
+        <content type="html"><![CDATA[<p> <img src="/2017/08/11/测试文章/01.jpg" alt="新生"></p><blockquote><p>测试测试</p></blockquote>]]></content>
+      
+      
       <categories>
-        <category>碎碎念</category>
+          
+          <category> 碎碎念 </category>
+          
       </categories>
-      <tags>
-        <tag>闲谈</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title><![CDATA[终于搭好了]]></title>
-    <url>%2F2017%2F08%2F11%2F%E7%BB%88%E4%BA%8E%E6%90%AD%E5%A5%BD%E4%BA%86%2F</url>
-    <content type="text"><![CDATA[发布第一篇文章，用于测试。嗯，这是一篇非常正经的测试（吐槽）文章 花了两天的时间终于把自己的独立博客搭好，虽然博客在哪都能写，但是看别人的独立博客还可以自己定制功能，感觉很有意思的样子，便利用空闲时间去网上搜教程准备自己也搭一个。 网上有很多教程，但有的时候多也不是一个好事，在众多教程中挑了一个看上去还比较详细的教程照着搭。一直搭到本地测试都没有问题，部署到github之后以为就要搞定了，结果输入地址，出现的却是404页面。然后接着就是各种找解决的办法了，这心酸的过程就不多说，反正最后终于还是让我搞出来了，哈哈哈！ 其实如果只是搭一个基本框架出来是花不了多久的，但是就像盖房子，房子盖好了，你能忍受不去装修它么。我搭好的第一件事就是去把默认的主题换了，光是选主题就花了我大半天的时间，因为我既希望它好看，又希望它简洁，我把Hexo官网的所有主题都看了一遍，最后选择了next主题，其实还有其它几款主题感觉也不错，但是next详细的使用文档让人无法拒绝它。房子装修完就该放家具了，现在还在慢慢放家具中，所以此处先略过以后再说。 这期间最难过的不是搭建的过程，也不是搭建出现的错误，而是已经很久没有生过病的我竟然在这大夏天感冒了。经历过才知道备一些常用药的重要性，因为你不一定会有时间去医院。发着烧去挤轻轨，头晕的厉害，感觉特别难受，当时还有闲心想还好没有座位，避免了让座的尴尬，因为这个时候坐下估计就不想起来了。之前一直不知道原来感冒还分风寒感冒和风热感冒，开始吃的是朋友备的感冒药，但是效果不大，之后去药房拿药才知道我是风热感冒，而朋友的是风寒感冒药，这真是吃个感冒药也是有大学问。]]></content>
+      
+      
+        <tags>
+            
+            <tag> 闲谈 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>终于搭好了</title>
+      <link href="/2017/08/11/%E7%BB%88%E4%BA%8E%E6%90%AD%E5%A5%BD%E4%BA%86/"/>
+      <url>/2017/08/11/%E7%BB%88%E4%BA%8E%E6%90%AD%E5%A5%BD%E4%BA%86/</url>
+      
+        <content type="html"><![CDATA[<p> <img src="/2017/08/11/终于搭好了/01.jpg" alt="新生"></p><blockquote><p>发布第一篇文章，用于测试。<br>嗯，这是一篇非常正经的测试（吐槽）文章</p></blockquote><p>花了两天的时间终于把自己的独立博客搭好，虽然博客在哪都能写，但是看别人的独立博客还可以自己定制功能，感觉很有意思的样子，便利用空闲时间去网上搜教程准备自己也搭一个。    </p><p>   网上有很多教程，但有的时候多也不是一个好事，在众多教程中挑了一个看上去还比较详细的教程照着搭。一直搭到本地测试都没有问题，部署到github之后以为就要搞定了，结果输入地址，出现的却是404页面。然后接着就是各种找解决的办法了，这心酸的过程就不多说，反正最后终于还是让我搞出来了，哈哈哈！</p><p>其实如果只是搭一个基本框架出来是花不了多久的，但是就像盖房子，房子盖好了，你能忍受不去装修它么。我搭好的第一件事就是去把默认的主题换了，光是选主题就花了我大半天的时间，因为我既希望它好看，又希望它简洁，我把Hexo官网的所有主题都看了一遍，最后选择了next主题，其实还有其它几款主题感觉也不错，但是next详细的使用文档让人无法拒绝它。房子装修完就该放家具了，现在还在慢慢放家具中，所以此处先略过以后再说。</p><p>  这期间最难过的不是搭建的过程，也不是搭建出现的错误，而是已经很久没有生过病的我竟然在这大夏天感冒了。经历过才知道备一些常用药的重要性，因为你不一定会有时间去医院。发着烧去挤轻轨，头晕的厉害，感觉特别难受，当时还有闲心想还好没有座位，避免了让座的尴尬，因为这个时候坐下估计就不想起来了。之前一直不知道原来感冒还分风寒感冒和风热感冒，开始吃的是朋友备的感冒药，但是效果不大，之后去药房拿药才知道我是风热感冒，而朋友的是风寒感冒药，这真是吃个感冒药也是有大学问。</p>]]></content>
+      
+      
       <categories>
-        <category>碎碎念</category>
+          
+          <category> 碎碎念 </category>
+          
       </categories>
-      <tags>
-        <tag>闲谈</tag>
-      </tags>
-  </entry>
+      
+      
+        <tags>
+            
+            <tag> 闲谈 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+  
+  
 </search>
