@@ -79,8 +79,8 @@ menu_icons:
 
 # Schemes
 #scheme: Muse
-scheme: Mist
-#scheme: Pisces
+# scheme: Mist
+scheme: Pisces
 #scheme: Gemini
 
 
@@ -93,10 +93,11 @@ scheme: Mist
 # Value is the target link (E.g. GitHub: https://github.com/iissnan)
 social:
   #LinkLabel: Link
-  GitHub: https://github.com/olivivian
-  简书: http://www.jianshu.com/u/150822f71e37
-  博客园: http://www.cnblogs.com/shiy/
- 
+  # GitHub: https://github.com/olivivian
+  # 简书: http://www.jianshu.com/u/150822f71e37
+  # 博客园: http://www.cnblogs.com/shiy/
+掘金: https://juejin.cn/user/2612095357298727/posts
+
 # Social Links Icons
 # Icon Mapping:
 #   Map a menu item to a specific FontAwesome icon name.
@@ -126,7 +127,7 @@ links_layout: block
 #links_layout: inline
 links:
   待定: http://example.com/
-  
+
 # Sidebar Avatar
 # in theme directory(source/images): /images/avatar.jpg
 # in site  directory(source/uploads): /uploads/avatar.jpg
@@ -172,7 +173,7 @@ sidebar:
 
   # Scroll percent label in b2t button
   scrollpercent: false
-  
+
   # Enable sidebar on narrow view
   onmobile: false
 
@@ -225,7 +226,7 @@ post_wordcount:
 
 # Declare license on posts
 post_copyright:
-  enable: false
+  enable: true
   license: CC BY-NC-SA 3.0
   license_url: https://creativecommons.org/licenses/by-nc-sa/3.0/
 
