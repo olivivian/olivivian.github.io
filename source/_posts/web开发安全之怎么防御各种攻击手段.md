@@ -271,3 +271,4 @@ SYN 攻击防护（只是DDoS的一种）：
 
 [wiki—中间人攻击](https://en.wikipedia.org/wiki/Man-in-the-middle_attack)
 
+>本文作者：Axjy<br/>微信公众号：Axjy前端学习库<br/>版权声明：本博客所有文章除特别声明外，均采用 [CC BY-NC-SA 3.0 CN 许可协议](https://creativecommons.org/licenses/by-nc-sa/3.0/cn/)。转载请注明出处！

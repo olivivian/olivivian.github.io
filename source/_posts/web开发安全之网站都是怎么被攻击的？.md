@@ -613,3 +613,4 @@ SYN 攻击指的是，攻击客户端在短时间内伪造大量不存在的 IP 
 
 [百度百科—中间人攻击](https://baike.baidu.com/item/%E4%B8%AD%E9%97%B4%E4%BA%BA%E6%94%BB%E5%87%BB/1739730?fr=aladdin)
 
+>本文作者：Axjy<br/>微信公众号：Axjy前端学习库<br/>版权声明：本博客所有文章除特别声明外，均采用 [CC BY-NC-SA 3.0 CN 许可协议](https://creativecommons.org/licenses/by-nc-sa/3.0/cn/)。转载请注明出处！
