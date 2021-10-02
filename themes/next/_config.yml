@@ -96,7 +96,7 @@ social:
   # GitHub: https://github.com/olivivian
   # 简书: http://www.jianshu.com/u/150822f71e37
   # 博客园: http://www.cnblogs.com/shiy/
-掘金: https://juejin.cn/user/2612095357298727/posts
+  # 掘金: https://juejin.cn/user/2612095357298727/posts
 
 # Social Links Icons
 # Icon Mapping:
@@ -321,7 +321,7 @@ han: false
 #swiftype_key:
 
 # Baidu Analytics ID
-baidu_analytics: 2d936597755d865b8efbe09c4b58c875
+baidu_analytics: 633ffcbf1f5073c7e6a2058ef1d9214f
 
 # Duoshuo ShortName
 #duoshuo_shortname:
