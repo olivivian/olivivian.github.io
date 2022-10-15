@@ -1,38 +1,284 @@
-{% extends '_layout.swig' %}
-{% import '_macro/post.swig' as post_template %}
-{% import '_macro/sidebar.swig' as sidebar_template %}
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  
+  <title>Hexo+github pages博客搭建 | JinBlog</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="因为怎么搭建的教程已经有很多详细的文档了，所以我就不再写具体的搭建过程。而是写下大致流程、遇到的问题与相关链接推荐。对自己博客搭建做一个记录的同时也希望能对你有所帮助。 先放上：官方文档 主要针对window操作系统，Mac可以参考这里。  安装前准备:安装Node.js Node.js安装教程 安装Gitgit安装教程 注册github账号注册github教程（一）注册github教程（二）">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Hexo+github pages博客搭建">
+<meta property="og:url" content="http://yoursite.com/2017/08/12/Hexo-github-pages%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/index.html">
+<meta property="og:site_name" content="JinBlog">
+<meta property="og:description" content="因为怎么搭建的教程已经有很多详细的文档了，所以我就不再写具体的搭建过程。而是写下大致流程、遇到的问题与相关链接推荐。对自己博客搭建做一个记录的同时也希望能对你有所帮助。 先放上：官方文档 主要针对window操作系统，Mac可以参考这里。  安装前准备:安装Node.js Node.js安装教程 安装Gitgit安装教程 注册github账号注册github教程（一）注册github教程（二）">
+<meta property="og:locale">
+<meta property="og:image" content="http://yoursite.com/2017/08/12/Hexo-github-pages%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/03.jpg">
+<meta property="og:image" content="http://yoursite.com/2017/08/12/Hexo-github-pages%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/01.png">
+<meta property="og:image" content="http://yoursite.com/2017/08/12/Hexo-github-pages%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/02.png">
+<meta property="article:published_time" content="2017-08-12T12:14:33.000Z">
+<meta property="article:modified_time" content="2022-09-03T13:02:22.529Z">
+<meta property="article:author" content="Axjy">
+<meta property="article:tag" content="Hexo">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://yoursite.com/2017/08/12/Hexo-github-pages%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/03.jpg">
+  
+    <link rel="alternate" href="/atom.xml" title="JinBlog" type="application/atom+xml">
+  
+  
+    <link rel="shortcut icon" href="/favicon.png">
+  
+  
+    
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/typeface-source-code-pro@0.0.71/index.min.css">
+
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+  
+    
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.min.css">
+
+  
+<meta name="generator" content="Hexo 6.3.0"></head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">JinBlog</a>
+      </h1>
+      
+        <h2 id="subtitle-wrap">
+          <a href="/" id="subtitle">前端开发探索</a>
+        </h2>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Suche"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Suche"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+
+      <div class="outer">
+        <section id="main"><article id="post-Hexo-github-pages博客搭建" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2017/08/12/Hexo-github-pages%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/" class="article-date">
+  <time class="dt-published" datetime="2017-08-12T12:14:33.000Z" itemprop="datePublished">2017-08-12</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/%E5%B7%A5%E5%85%B7/">工具</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="p-name article-title" itemprop="headline name">
+      Hexo+github pages博客搭建
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <p> <img src="/2017/08/12/Hexo-github-pages%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/03.jpg" alt="配图"></p>
+<p>因为怎么搭建的教程已经有很多详细的文档了，所以我就不再写具体的搭建过程。而是写下大致流程、遇到的问题与相关链接推荐。对自己博客搭建做一个记录的同时也希望能对你有所帮助。</p>
+<p>先放上：<a target="_blank" rel="noopener" href="https://hexo.io/docs/index.html">官方文档</a></p>
+<p>主要针对window操作系统，Mac可以参考<a target="_blank" rel="noopener" href="http://huangnx.com/2016/03/17/BlogPlatByHexoAndGithub/">这里</a>。</p>
+<hr>
+<h3 id="安装前准备"><a href="#安装前准备" class="headerlink" title="安装前准备:"></a>安装前准备:</h3><h4 id="安装Node-js"><a href="#安装Node-js" class="headerlink" title="安装Node.js"></a>安装Node.js</h4><p> <a target="_blank" rel="noopener" href="http://www.runoob.com/nodejs/nodejs-install-setup.html">Node.js安装教程</a></p>
+<h4 id="安装Git"><a href="#安装Git" class="headerlink" title="安装Git"></a>安装Git</h4><p><a target="_blank" rel="noopener" href="http://www.cnblogs.com/shiy/p/6441552.html">git安装教程</a></p>
+<h4 id="注册github账号"><a href="#注册github账号" class="headerlink" title="注册github账号"></a>注册github账号</h4><p><a target="_blank" rel="noopener" href="https://jingyan.baidu.com/article/455a9950abe0ada167277864.html">注册github教程（一）</a><br><a target="_blank" rel="noopener" href="https://jingyan.baidu.com/article/ff42efa93b2ed6c19e22021c.html">注册github教程（二）</a><br><em>注意：github的用户名一经注册就不能改变，所以起的时候尽量起些有意义的，当初注册的时候不知道随便起了一个名字，现在只能一直顶着这个名字了。用户名与昵称(Name)不同，昵称可以变化。</em></p>
+<hr>
+<p>前面的都弄清楚，就可以来搭建博客了</p>
+<h3 id="推荐教程"><a href="#推荐教程" class="headerlink" title="推荐教程"></a>推荐教程</h3><p><a target="_blank" rel="noopener" href="https://jingyan.baidu.com/article/d8072ac47aca0fec95cefd2d.html">史上最详细“截图”搭建Hexo博客并部署到Github</a></p>
+<h3 id="我搭建过程踩到的坑"><a href="#我搭建过程踩到的坑" class="headerlink" title="我搭建过程踩到的坑"></a>我搭建过程踩到的坑</h3><p>1、创建仓库的时候注意Repository的名字，仓库名称格式必须是【github用户名.github.io】。<em>此处就体现出了起一个好的github用户名的好处，真是一把辛酸泪。</em><br><img src="/2017/08/12/Hexo-github-pages%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/01.png" alt="我的博客仓库"><br>2、_config.yml配置的时候，冒号后面一定要有一个空格。<em>当时因为这个问题，走了好多弯路</em>。还有就是<code>hexo</code>在2点几的版本中<code>type: github</code>。之后的版本是<code>type: git</code>。<br><img src="/2017/08/12/Hexo-github-pages%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/02.png" alt="配置问题.png"></p>
+<h3 id="其它可能出现的问题："><a href="#其它可能出现的问题：" class="headerlink" title="其它可能出现的问题："></a>其它可能出现的问题：</h3><ul>
+<li>错误：执行<code>$hexo deloy</code>，提示<code>Error Deployer not found：git</code><br>解决：<code>$ npm install hexo-deployer-git --save</code></li>
+</ul>
+<h3 id="结束语"><a href="#结束语" class="headerlink" title="结束语"></a>结束语</h3><p> 一般来说按照流程一步一步的走是不会出错的，但是，意外总是发生的猝不及防，如果你不幸踩到了什么奇怪的坑，那就只能Wish you good luck！</p>
+<h3 id="其它参考"><a href="#其它参考" class="headerlink" title="其它参考"></a>其它参考</h3><blockquote>
+<p><a target="_blank" rel="noopener" href="http://www.cnblogs.com/dantefung/p/d8c48ba8030bcab7cfc364d423186fee.html">《Hexo+github搭建个人博客》</a><br><a target="_blank" rel="noopener" href="https://help.github.com/">github帮助文档</a><br><a target="_blank" rel="noopener" href="http://www.jianshu.com/p/e1cbc8b98aaf">MarkDown简单入门</a></p>
+</blockquote>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2017/08/12/Hexo-github-pages%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/" data-id="cl99p6ft0000bzswkhycn5ucn" data-title="Hexo+github pages博客搭建" class="article-share-link">Teilen</a>
+      
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Hexo/" rel="tag">Hexo</a></li></ul>
+
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2022/09/03/CSS%E5%9F%BA%E7%A1%80%E4%B8%8A/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Neuer</strong>
+      <div class="article-nav-title">
+        
+          CSS基础上
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2017/08/11/%E7%BB%88%E4%BA%8E%E6%90%AD%E5%A5%BD%E4%BA%86/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Älter</strong>
+      <div class="article-nav-title">终于搭好了</div>
+    </a>
+  
+</nav>
+
+  
+</article>
 
 
-{% block title %}{{ page.title }} | {{ config.title }}{% endblock %}
-
-{% block page_class %}page-post-detail{% endblock %}
-
-
-{% block content %}
-
-  <div id="posts" class="posts-expand">
-    {{ post_template.render(page) }}
-
-    <div class="post-spread">
-      {% if theme.jiathis %}
-        {% include '_partials/share/jiathis.swig' %}
-      {% elseif theme.baidushare %}
-        {% include '_partials/share/baidushare.swig' %}
-      {% elseif theme.add_this_id %}
-        {% include '_partials/share/add-this.swig' %}
-      {% elseif theme.duoshuo_shortname and theme.duoshuo_share %}
-        {% include '_partials/share/duoshuo_share.swig' %}
-      {% endif %}
+</section>
+        
+          <aside id="sidebar">
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Kategorien</h3>
+    <div class="widget">
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/%E5%89%8D%E7%AB%AF/">前端</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E5%B7%A5%E5%85%B7/">工具</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E7%A2%8E%E7%A2%8E%E5%BF%B5/">碎碎念</a></li></ul>
     </div>
   </div>
 
-{% endblock %}
 
-{% block sidebar %}
-  {{ sidebar_template.render(true) }}
-{% endblock %}
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tags</h3>
+    <div class="widget">
+      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/CSS/" rel="tag">CSS</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/HTTP/" rel="tag">HTTP</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Hexo/" rel="tag">Hexo</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/web%E5%AE%89%E5%85%A8/" rel="tag">web安全</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E9%97%B2%E8%B0%88/" rel="tag">闲谈</a></li></ul>
+    </div>
+  </div>
 
 
-{% block script_extra %}
-  {% include '_scripts/pages/post-details.swig' %}
-{% endblock %}
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tag Cloud</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/CSS/" style="font-size: 15px;">CSS</a> <a href="/tags/HTTP/" style="font-size: 15px;">HTTP</a> <a href="/tags/Hexo/" style="font-size: 10px;">Hexo</a> <a href="/tags/web%E5%AE%89%E5%85%A8/" style="font-size: 20px;">web安全</a> <a href="/tags/%E9%97%B2%E8%B0%88/" style="font-size: 15px;">闲谈</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archiv</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/09/">September 2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/08/">August 2017</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">letzter Beitrag</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2022/09/03/web%E5%BC%80%E5%8F%91%E5%AE%89%E5%85%A8%E4%B9%8B%E7%BD%91%E7%AB%99%E9%83%BD%E6%98%AF%E6%80%8E%E4%B9%88%E8%A2%AB%E6%94%BB%E5%87%BB%E7%9A%84%EF%BC%9F/">web开发安全之网站都是怎么被攻击的？</a>
+          </li>
+        
+          <li>
+            <a href="/2022/09/03/%E6%96%B0%E6%96%87%E7%AB%A0/">web开发安全之网站都是怎么被攻击的？</a>
+          </li>
+        
+          <li>
+            <a href="/2022/09/03/web%E5%BC%80%E5%8F%91%E5%AE%89%E5%85%A8%E4%B9%8B%E6%80%8E%E4%B9%88%E9%98%B2%E5%BE%A1%E5%90%84%E7%A7%8D%E6%94%BB%E5%87%BB%E6%89%8B%E6%AE%B5/">web开发安全之怎么防御各种攻击手段</a>
+          </li>
+        
+          <li>
+            <a href="/2022/09/03/HTML%E5%9F%BA%E7%A1%80%E5%BF%AB%E9%80%9F%E5%85%A5%E9%97%A8/">HTML基础快速入门</a>
+          </li>
+        
+          <li>
+            <a href="/2022/09/03/HTTP%E5%A4%87%E5%BF%98%E5%BD%95%E4%B9%8B%E5%B8%B8%E7%94%A8%E7%8A%B6%E6%80%81%E7%A0%81&%E8%AF%B7%E6%B1%82%E5%A4%B4&%E5%93%8D%E5%BA%94%E5%A4%B4&Cookies%E5%8F%8A%E8%AF%B7%E6%B1%82%E6%96%B9%E6%B3%95%E5%90%88%E9%9B%86%20/">HTTP备忘录之常用状态码&amp;请求头&amp;响应头&amp;Cookies及请求方法合集</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      
+      &copy; 2022 Axjy<br>
+      Powered by <a href="https://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+
+<script src="/js/jquery-3.4.1.min.js"></script>
+
+
+
+  
+<script src="/fancybox/jquery.fancybox.min.js"></script>
+
+
+
+
+<script src="/js/script.js"></script>
+
+
+
+
+
+  </div>
+</body>
+</html>
