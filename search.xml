@@ -302,336 +302,6 @@
       </tags>
   </entry>
   <entry>
-    <title>HTTP备忘录之常用状态码&amp;请求头&amp;响应头&amp;Cookies及请求方法合集</title>
-    <url>/2022/09/03/HTTP%E5%A4%87%E5%BF%98%E5%BD%95%E4%B9%8B%E5%B8%B8%E7%94%A8%E7%8A%B6%E6%80%81%E7%A0%81&amp;%E8%AF%B7%E6%B1%82%E5%A4%B4&amp;%E5%93%8D%E5%BA%94%E5%A4%B4&amp;Cookies%E5%8F%8A%E8%AF%B7%E6%B1%82%E6%96%B9%E6%B3%95%E5%90%88%E9%9B%86%20/</url>
-    <content><![CDATA[<br>
-# HTTP和HTTPS的区别图解
-
-<p>HTTPS和HTTP相比多了一层加密</p>
-<p><img src="https://gitee.com/Olivivian/PicGoImages/raw/master/img//Typora/typora-user-images/2021/10/02/image-20211002153855635.png" alt="image-20211002153855635"></p>
-<br>
-# HTTP的常用状态码
-
-<p><strong>200</strong>	 👉	OK，客户端请求成功</p>
-<p><strong>301</strong>👉	资源(网页等)被永久转移到其它URL</p>
-<p><strong>302</strong>👉	临时跳转</p>
-<p><strong>401</strong>	 👉	Unauthorized -请求未经授权</p>
-<p><strong>404</strong> 	👉	请求资源不存在，可能是输入了错误的URL</p>
-<p><strong>500</strong> 👉	服务器内部发生了不可预期的错误</p>
-<p><strong>504</strong> 👉	 Gateway Timeout-网关或者代理的服务器无法在规定的时间内获得想要的响应。</p>
-<p><img src="https://gitee.com/Olivivian/PicGoImages/raw/master/img//Typora/typora-user-images/2021/09/20/image-20210920192949824.png" alt="image-20210920192949824"></p>
-<br>
-# HTTP常用请求头（Request Headers）
-
-<p><strong>Accept</strong>：<br> 接收类型，表示浏览器支持的MIME类型（对标服务端返回的Content-Type）</p>
-<p><img src="https://gitee.com/Olivivian/PicGoImages/raw/master/img//Typora/typora-user-images/2021/10/02/image-20211002161729473.png" alt="image-20211002161729473"></p>
-<p><strong>Content-Type</strong>：<br>客户端发送出去实体内容的类型</p>
-<p><img src="https://gitee.com/Olivivian/PicGoImages/raw/master/img//Typora/typora-user-images/2021/10/02/image-20211002161801679.png" alt="image-20211002161801679"></p>
-<p><strong>Cache-Control</strong>：<br>指定请求和响应遵循的缓存机制，如no-cache</p>
-<p><img src="https://gitee.com/Olivivian/PicGoImages/raw/master/img//Typora/typora-user-images/2021/10/02/image-20211002163255317.png" alt="image-20211002163255317"></p>
-<p><strong>If-Modified-Since</strong>：<br> 对应服务端的<code>Last-Modified</code>,用来匹配看文件是否变动，只能精确到1s之内</p>
-<p><strong>Expires</strong>：<br>缓存控制，在这个时间内不会请求，直接使用缓存，服务端时间</p>
-<p><strong>Max-age</strong>：<br> 代表资源在本地缓存多少秒，有效时间内不会请求，而是使用缓存</p>
-<p><strong>If-None-Match</strong>：<br> 对应服务端的ETag,用来匹配文件内容是否改变（非常精确）</p>
-<p><strong>Cookie</strong>：<br> 有cookie并且<strong>同域</strong>访问时会自动带上</p>
-<p><img src="https://gitee.com/Olivivian/PicGoImages/raw/master/img//Typora/typora-user-images/2021/10/02/image-20211002155443610.png" alt="image-20211002155443610"></p>
-<p><strong>Referer</strong>：<br>该页面的来源URL（适用于所有类型的请求，会精确到详细页面地址，csrf拦截常用到这个字段）</p>
-<p><img src="https://gitee.com/Olivivian/PicGoImages/raw/master/img//Typora/typora-user-images/2021/10/02/image-20211002161835593.png" alt="image-20211002161835593"></p>
-<p><strong>Origin</strong>：<br>最初的请求是从哪里发起的（只会精确到端口)）,Origin比Referer更尊重隐私</p>
-<p><img src="https://gitee.com/Olivivian/PicGoImages/raw/master/img//Typora/typora-user-images/2021/10/02/image-20211002161858626.png" alt="image-20211002161858626"></p>
-<p><strong>User-Agent</strong>：<br> 用户客户端的一些必要信息，如UA头部等</p>
-<p><img src="https://gitee.com/Olivivian/PicGoImages/raw/master/img//Typora/typora-user-images/2021/10/02/image-20211002155948600.png" alt="image-20211002155948600"></p>
-<h1 id="HTTP常用响应头（Response-Headers）"><a href="#HTTP常用响应头（Response-Headers）" class="headerlink" title="HTTP常用响应头（Response Headers）"></a>HTTP常用响应头（Response Headers）</h1><p><strong>Content-Type</strong>：<br> 服务端返回的实体内容的类型</p>
-<p><strong>Cache-Control</strong>：<br>指定请求和响应遵循的缓存机制，如no-cache</p>
-<p><img src="https://gitee.com/Olivivian/PicGoImages/raw/master/img//Typora/typora-user-images/2021/10/02/image-20211002163336562.png" alt="image-20211002163336562"></p>
-<p><strong>Last-Modified</strong>：</p>
-<p> 请求资源的最后修改时间</p>
-<p><strong>Expires</strong>：<br>应该在什么时候认为文档已经过期，从而不再缓存它</p>
-<p><img src="https://gitee.com/Olivivian/PicGoImages/raw/master/img//Typora/typora-user-images/2021/10/02/image-20211002163349623.png" alt="image-20211002163349623"></p>
-<p><strong>Max-age</strong>：<br> 客户端的本地资源应该缓存多少秒，开启了	Cache-Control	后有效</p>
-<p><strong>ETag</strong>：<br>资源的特定版本的标识符，<code>Etags</code>类似于指纹</p>
-<p><strong>Set-Cookie</strong>：<br> 设置和页面关联的cookie,服务器通过这个头部把cookie传给客户端</p>
-<p><strong>Server</strong>：<br>服务器的一些相关信息</p>
-<p><img src="https://gitee.com/Olivivian/PicGoImages/raw/master/img//Typora/typora-user-images/2021/10/02/image-20211002160637134.png" alt="image-20211002160637134"></p>
-<p><strong>Access-Control-Allow-Origin</strong>：<br> 服务器端允许的请求Origin头部(譬如为*)</p>
-<br>
-# HTTP的各类请求方法
-
-<p><strong>GET</strong>：		 </p>
-<p>请求一个指定资源的表示形式.使用GET的请求应该只被用于获取数据</p>
-<p><strong>POST</strong>：	 		</p>
-<p>用于将实体提交到指定的资源，通常导致在服务器上的状态变化或副作用</p>
-<p><strong>PUT</strong>：	 		  </p>
-<p> 用请求有效载荷替换目标资源的所有当前表示</p>
-<p><strong>DELETE</strong>：	 	</p>
-<p>删除指定的资源</p>
-<p><strong>HEAD</strong>：	    	</p>
-<p>请求一个与GET请求的响应相同的响应，但没有响应体</p>
-<p><strong>CONNECT</strong>：	 </p>
-<p>建立一个到由目标资源标识的服务器的隧道。</p>
-<p><strong>OPTIONS</strong>：	 </p>
-<p> 用于描述目标资源的通信选项。</p>
-<p><strong>TRACE</strong>： 		</p>
-<p>沿着到目标资源的路径执行一个消息环回测试。</p>
-<p><strong>PATCH</strong>： 		</p>
-<p>用于对资源应用部分修改。</p>
-<br>
-# HTTP的缓存
-
-<p><img src="https://gitee.com/Olivivian/PicGoImages/raw/master/img//Typora/typora-user-images/2021/09/20/image-20210920225414298.png" alt="image-20210920225414298"></p>
-<h2 id="强缓存"><a href="#强缓存" class="headerlink" title="强缓存"></a>强缓存</h2><p><strong>Expires</strong> ：时间不准</p>
-<p><strong>Cache- Control的值有</strong></p>
-<ul>
-<li><strong>max-age</strong> :单位是秒，缓存时间计算的方式是距离发起的时间的秒数，超过间隔的秒数缓存失效</li>
-<li><strong>no-cache</strong> :不使用强缓存，需要与服务器验证缓存是否新鲜</li>
-<li><strong>no-store</strong> :禁止使用缓存(包括协商缓存)每次都向服务器请求最新的资源</li>
-<li><strong>must-revalidate</strong> :在缓存过期前可以使用，过期后必须向服务器验证</li>
-</ul>
-<h2 id="协商缓存"><a href="#协商缓存" class="headerlink" title="协商缓存"></a>协商缓存</h2><p><strong>ETag&#x2F;lf-None-Match</strong>,：hash 码，代表的是一个资源的标识符</p>
-<p><strong>Last- Modified&#x2F;lf- Modified-Since</strong>：文件的最后修改时间</p>
-<br>
-# 视频直播协议
-
-
-
-<table>
-<thead>
-<tr>
-<th>协议</th>
-<th>描述</th>
-<th>优点</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>HLS</td>
-<td>1、HTTP Live Streaming, Apple公司<br>2、基于HTTP协议<br>3、把一段视频流，分成一个个小的基于HTTP的文件来下载</td>
-<td>跨平台</td>
-</tr>
-<tr>
-<td>RTMP</td>
-<td>1、Real Time Messaging Protocol<br>2、Adobe公司<br>3、基于TCP</td>
-<td>时延低</td>
-</tr>
-<tr>
-<td>HTTP - FLV</td>
-<td>1、基于HTTP<br>2、http+flv，将音视频数据封装成FLV格式，然后通过HTTP协议传输给客户端</td>
-<td>时延低</td>
-</tr>
-</tbody></table>
-<br>
-# Cookie
-
-<p>Set-Cookie - response</p>
-<table>
-<thead>
-<tr>
-<th>Name&#x3D;value</th>
-<th>各种cookie的名称和值</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>Expires&#x3D;Date</td>
-<td>Cookie的有效期，缺省时Cookie仅在浏览器关闭之前有效。</td>
-</tr>
-<tr>
-<td>Path&#x3D; Path</td>
-<td>限制指定Cookie的发送范围的文件目录，默认为当前</td>
-</tr>
-<tr>
-<td>Domain&#x3D;domain</td>
-<td>限制cookie生效的域名，默认为创建cookie的服务域名</td>
-</tr>
-<tr>
-<td>secure</td>
-<td>仅在HTTPS安全连接时，才可以发送Cookie</td>
-</tr>
-<tr>
-<td>HttpOnly</td>
-<td>JavaScript脚本无法获得Cookie</td>
-</tr>
-<tr>
-<td><code>SameSite=[None\Strict\Lax]</code></td>
-<td>- None同站、跨站请求都可发送<br>- Strict仅在同站发送<br>- 允许与顶级导航一起发送，并将与第三方网站发起的GET请求一起发送</td>
-</tr>
-</tbody></table>
-]]></content>
-      <categories>
-        <category>前端</category>
-      </categories>
-      <tags>
-        <tag>HTTP</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Hexo+github pages博客搭建</title>
-    <url>/2017/08/12/Hexo-github-pages%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/</url>
-    <content><![CDATA[<p> <img src="/2017/08/12/Hexo-github-pages%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/03.jpg" alt="配图"></p>
-<p>因为怎么搭建的教程已经有很多详细的文档了，所以我就不再写具体的搭建过程。而是写下大致流程、遇到的问题与相关链接推荐。对自己博客搭建做一个记录的同时也希望能对你有所帮助。</p>
-<p>先放上：<a href="https://hexo.io/docs/index.html">官方文档</a></p>
-<p>主要针对window操作系统，Mac可以参考<a href="http://huangnx.com/2016/03/17/BlogPlatByHexoAndGithub/">这里</a>。</p>
-<hr>
-<h3 id="安装前准备"><a href="#安装前准备" class="headerlink" title="安装前准备:"></a>安装前准备:</h3><h4 id="安装Node-js"><a href="#安装Node-js" class="headerlink" title="安装Node.js"></a>安装Node.js</h4><p> <a href="http://www.runoob.com/nodejs/nodejs-install-setup.html">Node.js安装教程</a></p>
-<h4 id="安装Git"><a href="#安装Git" class="headerlink" title="安装Git"></a>安装Git</h4><p><a href="http://www.cnblogs.com/shiy/p/6441552.html">git安装教程</a></p>
-<h4 id="注册github账号"><a href="#注册github账号" class="headerlink" title="注册github账号"></a>注册github账号</h4><p><a href="https://jingyan.baidu.com/article/455a9950abe0ada167277864.html">注册github教程（一）</a><br><a href="https://jingyan.baidu.com/article/ff42efa93b2ed6c19e22021c.html">注册github教程（二）</a><br><em>注意：github的用户名一经注册就不能改变，所以起的时候尽量起些有意义的，当初注册的时候不知道随便起了一个名字，现在只能一直顶着这个名字了。用户名与昵称(Name)不同，昵称可以变化。</em></p>
-<hr>
-<p>前面的都弄清楚，就可以来搭建博客了</p>
-<h3 id="推荐教程"><a href="#推荐教程" class="headerlink" title="推荐教程"></a>推荐教程</h3><p><a href="https://jingyan.baidu.com/article/d8072ac47aca0fec95cefd2d.html">史上最详细“截图”搭建Hexo博客并部署到Github</a></p>
-<h3 id="我搭建过程踩到的坑"><a href="#我搭建过程踩到的坑" class="headerlink" title="我搭建过程踩到的坑"></a>我搭建过程踩到的坑</h3><p>1、创建仓库的时候注意Repository的名字，仓库名称格式必须是【github用户名.github.io】。<em>此处就体现出了起一个好的github用户名的好处，真是一把辛酸泪。</em><br><img src="/2017/08/12/Hexo-github-pages%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/01.png" alt="我的博客仓库"><br>2、_config.yml配置的时候，冒号后面一定要有一个空格。<em>当时因为这个问题，走了好多弯路</em>。还有就是<code>hexo</code>在2点几的版本中<code>type: github</code>。之后的版本是<code>type: git</code>。<br><img src="/2017/08/12/Hexo-github-pages%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/02.png" alt="配置问题.png"></p>
-<h3 id="其它可能出现的问题："><a href="#其它可能出现的问题：" class="headerlink" title="其它可能出现的问题："></a>其它可能出现的问题：</h3><ul>
-<li>错误：执行<code>$hexo deloy</code>，提示<code>Error Deployer not found：git</code><br>解决：<code>$ npm install hexo-deployer-git --save</code></li>
-</ul>
-<h3 id="结束语"><a href="#结束语" class="headerlink" title="结束语"></a>结束语</h3><p> 一般来说按照流程一步一步的走是不会出错的，但是，意外总是发生的猝不及防，如果你不幸踩到了什么奇怪的坑，那就只能Wish you good luck！</p>
-<h3 id="其它参考"><a href="#其它参考" class="headerlink" title="其它参考"></a>其它参考</h3><blockquote>
-<p><a href="http://www.cnblogs.com/dantefung/p/d8c48ba8030bcab7cfc364d423186fee.html">《Hexo+github搭建个人博客》</a><br><a href="https://help.github.com/">github帮助文档</a><br><a href="http://www.jianshu.com/p/e1cbc8b98aaf">MarkDown简单入门</a></p>
-</blockquote>
-]]></content>
-      <categories>
-        <category>工具</category>
-      </categories>
-      <tags>
-        <tag>Hexo</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>web开发安全之怎么防御各种攻击手段</title>
-    <url>/2022/09/03/web%E5%BC%80%E5%8F%91%E5%AE%89%E5%85%A8%E4%B9%8B%E6%80%8E%E4%B9%88%E9%98%B2%E5%BE%A1%E5%90%84%E7%A7%8D%E6%94%BB%E5%87%BB%E6%89%8B%E6%AE%B5/</url>
-    <content><![CDATA[<p>在互联网时代，数据安全和个人隐私一直都是大家很关心的问题，要怎么保护我们的应用以及数据呢？上篇以及分析了各种攻击手段，现在我们就来看看怎么防御！🤗</p>
-<h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>看完本篇你将收获</p>
-<ul>
-<li>✅跨站脚本攻击XSS（Cross-Site Scripting）的大部分防御措施</li>
-<li>✅跨站请求伪造CSRF（Cross Site Request Forgery ）攻击的大部分防御措施</li>
-<li>✅注入Injection攻击的的防御措施</li>
-<li>✅其他一些防御措施及个人用户的安全建议</li>
-</ul>
-<h1 id="XSS的防御"><a href="#XSS的防御" class="headerlink" title="XSS的防御"></a>XSS的防御</h1><p>1、永远不要信任用户的提交内容🚫，应该做输入过滤</p>
-<blockquote>
-<p>例如：邮箱，电话号码，用户名，密码……等输入格式的检查，使用户只能按照规定的格式输入。</p>
-<p>移除用户上传的DOM属性，如onerror等，移除用户上传的style节点，script节点，iframe节点等</p>
-<p>不仅前端需要做过滤，后端同样也需要，因为攻击者完全可以绕过正常输入，直接利用相关接口发送信息。</p>
-</blockquote>
-<p>2、不要将用户提交内容直接插入到页面，建议做一些HTML转义操作</p>
-<p><img src="https://gitee.com/Olivivian/PicGoImages/raw/master/img//Typora/typora-user-images/2021/09/05/image-20210905151054329.png" alt="image-20210905151054329"></p>
-<p>3、cookies设置HttpOnly</p>
-<blockquote>
-<p>这样可以禁止 JavaScript 读取某些敏感 Cookie，攻击者完成 XSS 注入后也无法窃取此 Cookie。</p>
-</blockquote>
-<p>4、验证码：防止脚本冒充用户提交危险操作❗❗❗</p>
-<p>5、少用 <code>.innerHTML</code>、<code>.outerHTML</code>、<code>document.write()</code>等直接插入html的方式，而改用安全性更高的<code>.textContent</code>、<code>.setAttribute()</code> 等</p>
-<blockquote>
-<p>避免把攻击者恶意编写的脚本注入到代码中</p>
-</blockquote>
-<p>6、注意使用DOM 中的内联事件监听器，如 <code>location</code>、<code>onclick</code>、<code>onerror</code>、<code>onload</code>、<code>onmouseover</code> 等，<code>&lt;a&gt;</code> 标签的 <code>href</code> 属性，JavaScript 的 <code>eval()</code>、<code>setTimeout()</code>、<code>setInterval()</code> 等</p>
-<blockquote>
-<p>因为它们都能把字符串作为代码运行。如果不可信的数据拼接到字符串中传递给这些 API，很容易产生安全隐患</p>
-</blockquote>
-<p>7、开启CSP防护。将CSP设置成<code>Content-Security-Policy: script-src &#39;self&#39;</code>，就可以开启。</p>
-<blockquote>
-<p>内容安全策略（CSP）的设计就是为了防御XSS攻击的，开启之后则网站将不允许内联脚本执行，禁止加载外域代码，禁止外域提交。虽然可以有效的防止XSS攻击，但是因为过于严格可能对自身业务开发造成一定的限制👉 <a href="https://developer.mozilla.org/zh-CN/docs/Web/HTTP/CSP">MDN CSP</a></p>
-</blockquote>
-<h2 id="利用现成的工具"><a href="#利用现成的工具" class="headerlink" title="利用现成的工具"></a>利用现成的工具</h2><ul>
-<li>主流框架默认防御XSS</li>
-<li>或者使用一些第三方库帮助过滤，如<a href="https://github.com/cure53/DOMPurify">DOMPurify</a> （针对 HTML、MathML 和 SVG 的仅支持DOM、快速、高容错的 XSS 过滤器）</li>
-</ul>
-<h2 id="可能被XSS攻击的实例"><a href="#可能被XSS攻击的实例" class="headerlink" title="可能被XSS攻击的实例"></a>可能被XSS攻击的实例</h2><p>1、使用<a href="https://developer.mozilla.org/zh-CN/docs/Web/API/DOMParser">DOMParser</a>把srting转化为DOM时，可能携带执行脚本（需要过滤）</p>
-<p><img src="https://gitee.com/Olivivian/PicGoImages/raw/master/img//Typora/typora-user-images/2021/09/05/image-20210905192746564.png" alt="image-20210905192746564"></p>
-<p>2、用户上传svg图片时，svg中可以内嵌sctipt标签（需要过滤）</p>
-<p><img src="https://gitee.com/Olivivian/PicGoImages/raw/master/img//Typora/typora-user-images/2021/09/05/image-20210905193418138.png" alt="image-20210905193418138"></p>
-<p>3、允许用户自定义跳转链接，a标签的跳转链接是可以被写成js代码的，所以最好不要允许</p>
-<p><img src="https://gitee.com/Olivivian/PicGoImages/raw/master/img//Typora/typora-user-images/2021/09/05/image-20210905194005432.png" alt="image-20210905194005432"></p>
-<p>4、让用户自定义样式，举个例子，假如有这样一个选项组</p>
-<p><img src="https://gitee.com/Olivivian/PicGoImages/raw/master/img//Typora/typora-user-images/2021/09/05/image-20210905194507424.png" alt="image-20210905194507424"></p>
-<p>它的选中是这样写的</p>
-<p><img src="https://gitee.com/Olivivian/PicGoImages/raw/master/img//Typora/typora-user-images/2021/09/05/image-20210905194659211.png" alt="image-20210905194659211"></p>
-<p>当用户选择指定选项时，background才切换成某一个，而此时background会发送一个get请求，并且会带上一个选中的信息，这个时候就有可能受到XSS攻击</p>
-<p>所以首先不要这样写！不要这样写！不要这样写！👻，其次需要注意类似background这种可以发送请求的属性，最后一定要用，一定记得做过滤！！！🥶</p>
-<h1 id="CSRF的防御"><a href="#CSRF的防御" class="headerlink" title="CSRF的防御"></a>CSRF的防御</h1><p>1、利用验证码，强制用户必须与应用进行交互，才能完成最终请求</p>
-<blockquote>
-<p>如果验证码使用的太频繁，会导致用户体验很不好💥，所以一般只用于特殊操作。</p>
-<p>【CSRF 攻击的过程，往往是在用户不知情的情况下发生的，在用户不知情的情况下构造网络请求】</p>
-</blockquote>
-<p>2、检查 HTTP Referer 字段</p>
-<blockquote>
-<p>根据 HTTP 协议，在 HTTP 头中有一个字段叫 Referer，它记录了该 HTTP 请求的来源地址，如果我们能判断当前HTTP请求的来源地址，只允许来自本网站的的请求才能访问，那么CSRF攻击就失效了。不过需要知道的是某些浏览器的Referer值可以被篡改。</p>
-<p>【CSRF的攻击来源通常是来自第三方网站】</p>
-</blockquote>
-<p>3、使用token，token 验证的 CSRF 防御机制是公认最合适的方案</p>
-<blockquote>
-<p>后端随机产生一个 token，把这个token 保存到 session 状态中；同时后端把这个token 交给前端，前端页面提交请求时，把 token 加入到请求数据或者头信息中，一起传给后端，端验证前端传来的 token 与 session 是否一致，不一致则拒绝该请求。</p>
-<p>【<code>CSRF</code>攻击之所以能够成功，是因为攻击者可以伪造用户的请求，该请求中所有的用户验证信息都存在于 <code>cookie</code>中，因此攻击者可以在不知道用户验证信息的情况下直接利用用户的 <code>cookie</code>来通过安全验证。】</p>
-</blockquote>
-<p>token应该和用户信息绑定，因为攻击者自己也可以通过注册用户去获取token；token应该设置过期时间；</p>
-<p><img src="https://gitee.com/Olivivian/PicGoImages/raw/master/img//Typora/typora-user-images/2021/09/05/image-20210905200730871.png" alt="image-20210905200730871"></p>
-<p>4、Cookie 的 SameSite 属性👉<a href="http://www.ruanyifeng.com/blog/2019/09/cookie-samesite.html"><code>SameSite</code>属性</a></p>
-<p>5、其他，get请求不对数据进行修改，服务器端设置 X-Frame-Options 响应头，防止页面被内嵌。</p>
-<h1 id="Injection的防御"><a href="#Injection的防御" class="headerlink" title="Injection的防御"></a>Injection的防御</h1><p>1、数据校验，还是那句话，永远不要信任用户的输入🚫</p>
-<blockquote>
-<p>对用户的输入进行校验，可以通过正则表达式，或限制长度；对单引号和双”-“进行转换等。</p>
-</blockquote>
-<p>2、不要使用动态拼装 SQL</p>
-<blockquote>
-<p>可以使用参数化的 SQL 或者直接使用存储过程进行数据查询存取。</p>
-</blockquote>
-<p>3、严格的权限管理（最小权限原则）</p>
-<blockquote>
-<p>严格限制Web应用的数据库的操作权限,只给用户提供仅仅能够满足其工作的最低权限,从而最大限度的 减少注入攻击对数据库的危害</p>
-</blockquote>
-<p>4、不要把机密信息直接存放</p>
-<blockquote>
-<p>加密或者 hash 掉密码和敏感的信息。</p>
-</blockquote>
-<p>5、特殊字符转义</p>
-<blockquote>
-<p>对进入数据库的特殊字符（’,”,,&lt;,&gt;,&amp;,*,; 等）进行转义处理,或编码转换</p>
-</blockquote>
-<p>6、查询SQL的地方使用 <a href="https://www.cnblogs.com/geaozhang/p/9891338.html">prepared statement</a></p>
-<h1 id="防御DoS和防御DDoS"><a href="#防御DoS和防御DDoS" class="headerlink" title="防御DoS和防御DDoS"></a>防御DoS和防御DDoS</h1><p>不太懂就不细说了😗</p>
-<p>SYN 攻击防护（只是DDoS的一种）：</p>
-<ol>
-<li>缩短超时（SYN Timeout）时间</li>
-<li>增加最大半连接数</li>
-<li>过滤网关防护</li>
-</ol>
-<blockquote>
-<p>哈哈哈🤣，黑客为了逼迫 Github 移除反审查项目Greatfire，对它进行了DDoS攻击</p>
-<p><a href="https://www.leiphone.com/category/gbsecurity/s6FdUv4tcJ9OJwfI.html">GitHub 遭遇有史以来最严重DDoS攻击</a></p>
-</blockquote>
-<h1 id="防御中间人"><a href="#防御中间人" class="headerlink" title="防御中间人"></a>防御中间人</h1><p>浏览器和服务器双方并没有对彼此的身份进行未验证，从而给中间人创造了攻击的条件，所以只需要增加一个安全通道来传输信息。HTTPS 就可以用来防御中间人攻击。</p>
-<blockquote>
-<p>如果你没有完全关闭 HTTP 访问的话，攻击方还是可以通过某些方式将 HTTPS 降级为 HTTP 从而实现中间人攻击。</p>
-</blockquote>
-<h1 id="个人用户的web安全建议"><a href="#个人用户的web安全建议" class="headerlink" title="个人用户的web安全建议"></a>个人用户的web安全建议</h1><p>🎨  不要忽视浏览器弹出的证书警告！你可能访问的是钓鱼网站或者假冒的服务器；</p>
-<p>🎨  建议尽量不使用公共的 Wi-Fi，因为很可能就会发生中间人攻击的情况。如果你在通信的过程中涉及到了某些敏感信息，就完全暴露给攻击方了；</p>
-<p>🎨  在任何网站上登录自己的账号前确保网址是走的HTTPS加密协议；</p>
-<p>🎨  使用网页版邮件的浏览邮件或者新闻也会带来额外的风险，因为查看邮件或者新闻消息有可能导致恶意代码的攻击。</p>
-<p>🎨 尽量不要打开可疑的链接，一定要打开时，使用不常用的浏览器。</p>
-<h1 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h1><p>防御简单的总结就是</p>
-<ul>
-<li>过滤！过滤！过滤！</li>
-<li>检查！检查！检查！</li>
-</ul>
-<h1 id="碎碎念"><a href="#碎碎念" class="headerlink" title="碎碎念"></a>碎碎念</h1><p>因为好玩去黑网站的人，还是少数的，大多数攻击都是为了有利可图，我们不可能确保自己的应用绝对无法被攻击，但是只要攻击我们的时候，黑客花费的成本远比他可以获取的利益大得多，黑客就不会去攻击。防范强如支付宝、QQ等产品，也都曾被报过漏洞，所以防御不是绝对的，我们只能想办法让我们的应用更加安全。</p>
-<p>参考资料：</p>
-<p><a href="https://cheatsheetseries.owasp.org/cheatsheets/DOM_based_XSS_Prevention_Cheat_Sheet.html">DOM based XSS Prevention Cheat Sheet</a></p>
-<p><a href="https://owasp.org/www-community/xss-filter-evasion-cheatsheet">XSS Filter Evasion Cheat Sheet</a></p>
-<p><a href="https://en.wikipedia.org/wiki/Cross-site_scripting#cite_note-11">Cross-site scripting</a></p>
-<p><a href="https://en.wikipedia.org/wiki/Cross-site_request_forgery">Cross-site request forgery</a></p>
-<p><a href="https://owasp.org/www-community/attacks/csrf">Cross Site Request Forgery (CSRF)</a></p>
-<p><a href="https://zhuanlan.zhihu.com/p/25486768?group_id=820705780520079360">谈谈对 Web 安全的理解</a></p>
-<p><a href="https://juejin.cn/post/6844903772930441230#heading-31">常见六大Web安全攻防解析</a></p>
-<p><a href="https://baike.baidu.com/item/%E4%B8%AD%E9%97%B4%E4%BA%BA%E6%94%BB%E5%87%BB/1739730?fr=aladdin">百度百科—中间人攻击</a></p>
-<p><a href="https://en.wikipedia.org/wiki/Man-in-the-middle_attack">wiki—中间人攻击</a></p>
-<blockquote>
-<p>本文作者：Axjy<br>微信公众号：Axjy前端学习库<br>版权声明：本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/cn/">CC BY-NC-SA 3.0 CN 许可协议</a>。转载请注明出处！</p>
-</blockquote>
-]]></content>
-      <categories>
-        <category>前端</category>
-      </categories>
-      <tags>
-        <tag>web安全</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>HTML基础快速入门</title>
     <url>/2022/09/03/HTML%E5%9F%BA%E7%A1%80%E5%BF%AB%E9%80%9F%E5%85%A5%E9%97%A8/</url>
     <content><![CDATA[<p>HTM知识体系</p>
@@ -836,52 +506,194 @@
       </tags>
   </entry>
   <entry>
-    <title>用于测试</title>
-    <url>/2017/08/11/%E6%B5%8B%E8%AF%95%E6%96%87%E7%AB%A0/</url>
-    <content><![CDATA[<p> <img src="/2017/08/11/%E6%B5%8B%E8%AF%95%E6%96%87%E7%AB%A0/01.jpg" alt="新生"></p>
-<blockquote>
-<p>测试测试</p>
-</blockquote>
-]]></content>
-      <categories>
-        <category>碎碎念</category>
-      </categories>
-      <tags>
-        <tag>闲谈</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>web开发安全之网站都是怎么被攻击的？</title>
-    <url>/2022/09/03/%E6%96%B0%E6%96%87%E7%AB%A0/</url>
-    <content><![CDATA[<p> <img src="/2022/09/03/%E6%96%B0%E6%96%87%E7%AB%A0/01.jpg" alt="新生"></p>
-<blockquote>
-<p>测试测试</p>
-</blockquote>
+    <title>HTTP备忘录之常用状态码&amp;请求头&amp;响应头&amp;Cookies及请求方法合集</title>
+    <url>/2022/09/03/HTTP%E5%A4%87%E5%BF%98%E5%BD%95%E4%B9%8B%E5%B8%B8%E7%94%A8%E7%8A%B6%E6%80%81%E7%A0%81&amp;%E8%AF%B7%E6%B1%82%E5%A4%B4&amp;%E5%93%8D%E5%BA%94%E5%A4%B4&amp;Cookies%E5%8F%8A%E8%AF%B7%E6%B1%82%E6%96%B9%E6%B3%95%E5%90%88%E9%9B%86%20/</url>
+    <content><![CDATA[<br>
+# HTTP和HTTPS的区别图解
+
+<p>HTTPS和HTTP相比多了一层加密</p>
+<p><img src="https://gitee.com/Olivivian/PicGoImages/raw/master/img//Typora/typora-user-images/2021/10/02/image-20211002153855635.png" alt="image-20211002153855635"></p>
+<br>
+# HTTP的常用状态码
+
+<p><strong>200</strong>	 👉	OK，客户端请求成功</p>
+<p><strong>301</strong>👉	资源(网页等)被永久转移到其它URL</p>
+<p><strong>302</strong>👉	临时跳转</p>
+<p><strong>401</strong>	 👉	Unauthorized -请求未经授权</p>
+<p><strong>404</strong> 	👉	请求资源不存在，可能是输入了错误的URL</p>
+<p><strong>500</strong> 👉	服务器内部发生了不可预期的错误</p>
+<p><strong>504</strong> 👉	 Gateway Timeout-网关或者代理的服务器无法在规定的时间内获得想要的响应。</p>
+<p><img src="https://gitee.com/Olivivian/PicGoImages/raw/master/img//Typora/typora-user-images/2021/09/20/image-20210920192949824.png" alt="image-20210920192949824"></p>
+<br>
+# HTTP常用请求头（Request Headers）
+
+<p><strong>Accept</strong>：<br> 接收类型，表示浏览器支持的MIME类型（对标服务端返回的Content-Type）</p>
+<p><img src="https://gitee.com/Olivivian/PicGoImages/raw/master/img//Typora/typora-user-images/2021/10/02/image-20211002161729473.png" alt="image-20211002161729473"></p>
+<p><strong>Content-Type</strong>：<br>客户端发送出去实体内容的类型</p>
+<p><img src="https://gitee.com/Olivivian/PicGoImages/raw/master/img//Typora/typora-user-images/2021/10/02/image-20211002161801679.png" alt="image-20211002161801679"></p>
+<p><strong>Cache-Control</strong>：<br>指定请求和响应遵循的缓存机制，如no-cache</p>
+<p><img src="https://gitee.com/Olivivian/PicGoImages/raw/master/img//Typora/typora-user-images/2021/10/02/image-20211002163255317.png" alt="image-20211002163255317"></p>
+<p><strong>If-Modified-Since</strong>：<br> 对应服务端的<code>Last-Modified</code>,用来匹配看文件是否变动，只能精确到1s之内</p>
+<p><strong>Expires</strong>：<br>缓存控制，在这个时间内不会请求，直接使用缓存，服务端时间</p>
+<p><strong>Max-age</strong>：<br> 代表资源在本地缓存多少秒，有效时间内不会请求，而是使用缓存</p>
+<p><strong>If-None-Match</strong>：<br> 对应服务端的ETag,用来匹配文件内容是否改变（非常精确）</p>
+<p><strong>Cookie</strong>：<br> 有cookie并且<strong>同域</strong>访问时会自动带上</p>
+<p><img src="https://gitee.com/Olivivian/PicGoImages/raw/master/img//Typora/typora-user-images/2021/10/02/image-20211002155443610.png" alt="image-20211002155443610"></p>
+<p><strong>Referer</strong>：<br>该页面的来源URL（适用于所有类型的请求，会精确到详细页面地址，csrf拦截常用到这个字段）</p>
+<p><img src="https://gitee.com/Olivivian/PicGoImages/raw/master/img//Typora/typora-user-images/2021/10/02/image-20211002161835593.png" alt="image-20211002161835593"></p>
+<p><strong>Origin</strong>：<br>最初的请求是从哪里发起的（只会精确到端口)）,Origin比Referer更尊重隐私</p>
+<p><img src="https://gitee.com/Olivivian/PicGoImages/raw/master/img//Typora/typora-user-images/2021/10/02/image-20211002161858626.png" alt="image-20211002161858626"></p>
+<p><strong>User-Agent</strong>：<br> 用户客户端的一些必要信息，如UA头部等</p>
+<p><img src="https://gitee.com/Olivivian/PicGoImages/raw/master/img//Typora/typora-user-images/2021/10/02/image-20211002155948600.png" alt="image-20211002155948600"></p>
+<h1 id="HTTP常用响应头（Response-Headers）"><a href="#HTTP常用响应头（Response-Headers）" class="headerlink" title="HTTP常用响应头（Response Headers）"></a>HTTP常用响应头（Response Headers）</h1><p><strong>Content-Type</strong>：<br> 服务端返回的实体内容的类型</p>
+<p><strong>Cache-Control</strong>：<br>指定请求和响应遵循的缓存机制，如no-cache</p>
+<p><img src="https://gitee.com/Olivivian/PicGoImages/raw/master/img//Typora/typora-user-images/2021/10/02/image-20211002163336562.png" alt="image-20211002163336562"></p>
+<p><strong>Last-Modified</strong>：</p>
+<p> 请求资源的最后修改时间</p>
+<p><strong>Expires</strong>：<br>应该在什么时候认为文档已经过期，从而不再缓存它</p>
+<p><img src="https://gitee.com/Olivivian/PicGoImages/raw/master/img//Typora/typora-user-images/2021/10/02/image-20211002163349623.png" alt="image-20211002163349623"></p>
+<p><strong>Max-age</strong>：<br> 客户端的本地资源应该缓存多少秒，开启了	Cache-Control	后有效</p>
+<p><strong>ETag</strong>：<br>资源的特定版本的标识符，<code>Etags</code>类似于指纹</p>
+<p><strong>Set-Cookie</strong>：<br> 设置和页面关联的cookie,服务器通过这个头部把cookie传给客户端</p>
+<p><strong>Server</strong>：<br>服务器的一些相关信息</p>
+<p><img src="https://gitee.com/Olivivian/PicGoImages/raw/master/img//Typora/typora-user-images/2021/10/02/image-20211002160637134.png" alt="image-20211002160637134"></p>
+<p><strong>Access-Control-Allow-Origin</strong>：<br> 服务器端允许的请求Origin头部(譬如为*)</p>
+<br>
+# HTTP的各类请求方法
+
+<p><strong>GET</strong>：		 </p>
+<p>请求一个指定资源的表示形式.使用GET的请求应该只被用于获取数据</p>
+<p><strong>POST</strong>：	 		</p>
+<p>用于将实体提交到指定的资源，通常导致在服务器上的状态变化或副作用</p>
+<p><strong>PUT</strong>：	 		  </p>
+<p> 用请求有效载荷替换目标资源的所有当前表示</p>
+<p><strong>DELETE</strong>：	 	</p>
+<p>删除指定的资源</p>
+<p><strong>HEAD</strong>：	    	</p>
+<p>请求一个与GET请求的响应相同的响应，但没有响应体</p>
+<p><strong>CONNECT</strong>：	 </p>
+<p>建立一个到由目标资源标识的服务器的隧道。</p>
+<p><strong>OPTIONS</strong>：	 </p>
+<p> 用于描述目标资源的通信选项。</p>
+<p><strong>TRACE</strong>： 		</p>
+<p>沿着到目标资源的路径执行一个消息环回测试。</p>
+<p><strong>PATCH</strong>： 		</p>
+<p>用于对资源应用部分修改。</p>
+<br>
+# HTTP的缓存
+
+<p><img src="https://gitee.com/Olivivian/PicGoImages/raw/master/img//Typora/typora-user-images/2021/09/20/image-20210920225414298.png" alt="image-20210920225414298"></p>
+<h2 id="强缓存"><a href="#强缓存" class="headerlink" title="强缓存"></a>强缓存</h2><p><strong>Expires</strong> ：时间不准</p>
+<p><strong>Cache- Control的值有</strong></p>
+<ul>
+<li><strong>max-age</strong> :单位是秒，缓存时间计算的方式是距离发起的时间的秒数，超过间隔的秒数缓存失效</li>
+<li><strong>no-cache</strong> :不使用强缓存，需要与服务器验证缓存是否新鲜</li>
+<li><strong>no-store</strong> :禁止使用缓存(包括协商缓存)每次都向服务器请求最新的资源</li>
+<li><strong>must-revalidate</strong> :在缓存过期前可以使用，过期后必须向服务器验证</li>
+</ul>
+<h2 id="协商缓存"><a href="#协商缓存" class="headerlink" title="协商缓存"></a>协商缓存</h2><p><strong>ETag&#x2F;lf-None-Match</strong>,：hash 码，代表的是一个资源的标识符</p>
+<p><strong>Last- Modified&#x2F;lf- Modified-Since</strong>：文件的最后修改时间</p>
+<br>
+# 视频直播协议
+
+
+
+<table>
+<thead>
+<tr>
+<th>协议</th>
+<th>描述</th>
+<th>优点</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>HLS</td>
+<td>1、HTTP Live Streaming, Apple公司<br>2、基于HTTP协议<br>3、把一段视频流，分成一个个小的基于HTTP的文件来下载</td>
+<td>跨平台</td>
+</tr>
+<tr>
+<td>RTMP</td>
+<td>1、Real Time Messaging Protocol<br>2、Adobe公司<br>3、基于TCP</td>
+<td>时延低</td>
+</tr>
+<tr>
+<td>HTTP - FLV</td>
+<td>1、基于HTTP<br>2、http+flv，将音视频数据封装成FLV格式，然后通过HTTP协议传输给客户端</td>
+<td>时延低</td>
+</tr>
+</tbody></table>
+<br>
+# Cookie
+
+<p>Set-Cookie - response</p>
+<table>
+<thead>
+<tr>
+<th>Name&#x3D;value</th>
+<th>各种cookie的名称和值</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Expires&#x3D;Date</td>
+<td>Cookie的有效期，缺省时Cookie仅在浏览器关闭之前有效。</td>
+</tr>
+<tr>
+<td>Path&#x3D; Path</td>
+<td>限制指定Cookie的发送范围的文件目录，默认为当前</td>
+</tr>
+<tr>
+<td>Domain&#x3D;domain</td>
+<td>限制cookie生效的域名，默认为创建cookie的服务域名</td>
+</tr>
+<tr>
+<td>secure</td>
+<td>仅在HTTPS安全连接时，才可以发送Cookie</td>
+</tr>
+<tr>
+<td>HttpOnly</td>
+<td>JavaScript脚本无法获得Cookie</td>
+</tr>
+<tr>
+<td><code>SameSite=[None\Strict\Lax]</code></td>
+<td>- None同站、跨站请求都可发送<br>- Strict仅在同站发送<br>- 允许与顶级导航一起发送，并将与第三方网站发起的GET请求一起发送</td>
+</tr>
+</tbody></table>
 ]]></content>
       <categories>
         <category>前端</category>
       </categories>
       <tags>
-        <tag>web安全</tag>
+        <tag>HTTP</tag>
       </tags>
   </entry>
   <entry>
-    <title>终于搭好了</title>
-    <url>/2017/08/11/%E7%BB%88%E4%BA%8E%E6%90%AD%E5%A5%BD%E4%BA%86/</url>
-    <content><![CDATA[<p> <img src="/2017/08/11/%E7%BB%88%E4%BA%8E%E6%90%AD%E5%A5%BD%E4%BA%86/01.jpg" alt="新生"></p>
-<blockquote>
-<p>发布第一篇文章，用于测试。<br>嗯，这是一篇非常正经的测试（吐槽）文章</p>
+    <title>Hexo+github pages博客搭建</title>
+    <url>/2017/08/12/Hexo-github-pages%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/</url>
+    <content><![CDATA[<p> <img src="/2017/08/12/Hexo-github-pages%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/03.jpg" alt="配图"></p>
+<p>因为怎么搭建的教程已经有很多详细的文档了，所以我就不再写具体的搭建过程。而是写下大致流程、遇到的问题与相关链接推荐。对自己博客搭建做一个记录的同时也希望能对你有所帮助。</p>
+<p>先放上：<a href="https://hexo.io/docs/index.html">官方文档</a></p>
+<p>主要针对window操作系统，Mac可以参考<a href="http://huangnx.com/2016/03/17/BlogPlatByHexoAndGithub/">这里</a>。</p>
+<hr>
+<h3 id="安装前准备"><a href="#安装前准备" class="headerlink" title="安装前准备:"></a>安装前准备:</h3><h4 id="安装Node-js"><a href="#安装Node-js" class="headerlink" title="安装Node.js"></a>安装Node.js</h4><p> <a href="http://www.runoob.com/nodejs/nodejs-install-setup.html">Node.js安装教程</a></p>
+<h4 id="安装Git"><a href="#安装Git" class="headerlink" title="安装Git"></a>安装Git</h4><p><a href="http://www.cnblogs.com/shiy/p/6441552.html">git安装教程</a></p>
+<h4 id="注册github账号"><a href="#注册github账号" class="headerlink" title="注册github账号"></a>注册github账号</h4><p><a href="https://jingyan.baidu.com/article/455a9950abe0ada167277864.html">注册github教程（一）</a><br><a href="https://jingyan.baidu.com/article/ff42efa93b2ed6c19e22021c.html">注册github教程（二）</a><br><em>注意：github的用户名一经注册就不能改变，所以起的时候尽量起些有意义的，当初注册的时候不知道随便起了一个名字，现在只能一直顶着这个名字了。用户名与昵称(Name)不同，昵称可以变化。</em></p>
+<hr>
+<p>前面的都弄清楚，就可以来搭建博客了</p>
+<h3 id="推荐教程"><a href="#推荐教程" class="headerlink" title="推荐教程"></a>推荐教程</h3><p><a href="https://jingyan.baidu.com/article/d8072ac47aca0fec95cefd2d.html">史上最详细“截图”搭建Hexo博客并部署到Github</a></p>
+<h3 id="我搭建过程踩到的坑"><a href="#我搭建过程踩到的坑" class="headerlink" title="我搭建过程踩到的坑"></a>我搭建过程踩到的坑</h3><p>1、创建仓库的时候注意Repository的名字，仓库名称格式必须是【github用户名.github.io】。<em>此处就体现出了起一个好的github用户名的好处，真是一把辛酸泪。</em><br><img src="/2017/08/12/Hexo-github-pages%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/01.png" alt="我的博客仓库"><br>2、_config.yml配置的时候，冒号后面一定要有一个空格。<em>当时因为这个问题，走了好多弯路</em>。还有就是<code>hexo</code>在2点几的版本中<code>type: github</code>。之后的版本是<code>type: git</code>。<br><img src="/2017/08/12/Hexo-github-pages%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/02.png" alt="配置问题.png"></p>
+<h3 id="其它可能出现的问题："><a href="#其它可能出现的问题：" class="headerlink" title="其它可能出现的问题："></a>其它可能出现的问题：</h3><ul>
+<li>错误：执行<code>$hexo deloy</code>，提示<code>Error Deployer not found：git</code><br>解决：<code>$ npm install hexo-deployer-git --save</code></li>
+</ul>
+<h3 id="结束语"><a href="#结束语" class="headerlink" title="结束语"></a>结束语</h3><p> 一般来说按照流程一步一步的走是不会出错的，但是，意外总是发生的猝不及防，如果你不幸踩到了什么奇怪的坑，那就只能Wish you good luck！</p>
+<h3 id="其它参考"><a href="#其它参考" class="headerlink" title="其它参考"></a>其它参考</h3><blockquote>
+<p><a href="http://www.cnblogs.com/dantefung/p/d8c48ba8030bcab7cfc364d423186fee.html">《Hexo+github搭建个人博客》</a><br><a href="https://help.github.com/">github帮助文档</a><br><a href="http://www.jianshu.com/p/e1cbc8b98aaf">MarkDown简单入门</a></p>
 </blockquote>
-<p>花了两天的时间终于把自己的独立博客搭好，虽然博客在哪都能写，但是看别人的独立博客还可以自己定制功能，感觉很有意思的样子，便利用空闲时间去网上搜教程准备自己也搭一个。    </p>
-<p>   网上有很多教程，但有的时候多也不是一个好事，在众多教程中挑了一个看上去还比较详细的教程照着搭。一直搭到本地测试都没有问题，部署到github之后以为就要搞定了，结果输入地址，出现的却是404页面。然后接着就是各种找解决的办法了，这心酸的过程就不多说，反正最后终于还是让我搞出来了，哈哈哈！</p>
-<p>其实如果只是搭一个基本框架出来是花不了多久的，但是就像盖房子，房子盖好了，你能忍受不去装修它么。我搭好的第一件事就是去把默认的主题换了，光是选主题就花了我大半天的时间，因为我既希望它好看，又希望它简洁，我把Hexo官网的所有主题都看了一遍，最后选择了next主题，其实还有其它几款主题感觉也不错，但是next详细的使用文档让人无法拒绝它。房子装修完就该放家具了，现在还在慢慢放家具中，所以此处先略过以后再说。</p>
-<p>  这期间最难过的不是搭建的过程，也不是搭建出现的错误，而是已经很久没有生过病的我竟然在这大夏天感冒了。经历过才知道备一些常用药的重要性，因为你不一定会有时间去医院。发着烧去挤轻轨，头晕的厉害，感觉特别难受，当时还有闲心想还好没有座位，避免了让座的尴尬，因为这个时候坐下估计就不想起来了。之前一直不知道原来感冒还分风寒感冒和风热感冒，开始吃的是朋友备的感冒药，但是效果不大，之后去药房拿药才知道我是风热感冒，而朋友的是风寒感冒药，这真是吃个感冒药也是有大学问。</p>
 ]]></content>
       <categories>
-        <category>碎碎念</category>
+        <category>工具</category>
       </categories>
       <tags>
-        <tag>闲谈</tag>
+        <tag>Hexo</tag>
       </tags>
   </entry>
   <entry>
@@ -1199,6 +1011,194 @@
       </categories>
       <tags>
         <tag>web安全</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>web开发安全之怎么防御各种攻击手段</title>
+    <url>/2022/09/03/web%E5%BC%80%E5%8F%91%E5%AE%89%E5%85%A8%E4%B9%8B%E6%80%8E%E4%B9%88%E9%98%B2%E5%BE%A1%E5%90%84%E7%A7%8D%E6%94%BB%E5%87%BB%E6%89%8B%E6%AE%B5/</url>
+    <content><![CDATA[<p>在互联网时代，数据安全和个人隐私一直都是大家很关心的问题，要怎么保护我们的应用以及数据呢？上篇以及分析了各种攻击手段，现在我们就来看看怎么防御！🤗</p>
+<h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>看完本篇你将收获</p>
+<ul>
+<li>✅跨站脚本攻击XSS（Cross-Site Scripting）的大部分防御措施</li>
+<li>✅跨站请求伪造CSRF（Cross Site Request Forgery ）攻击的大部分防御措施</li>
+<li>✅注入Injection攻击的的防御措施</li>
+<li>✅其他一些防御措施及个人用户的安全建议</li>
+</ul>
+<h1 id="XSS的防御"><a href="#XSS的防御" class="headerlink" title="XSS的防御"></a>XSS的防御</h1><p>1、永远不要信任用户的提交内容🚫，应该做输入过滤</p>
+<blockquote>
+<p>例如：邮箱，电话号码，用户名，密码……等输入格式的检查，使用户只能按照规定的格式输入。</p>
+<p>移除用户上传的DOM属性，如onerror等，移除用户上传的style节点，script节点，iframe节点等</p>
+<p>不仅前端需要做过滤，后端同样也需要，因为攻击者完全可以绕过正常输入，直接利用相关接口发送信息。</p>
+</blockquote>
+<p>2、不要将用户提交内容直接插入到页面，建议做一些HTML转义操作</p>
+<p><img src="https://gitee.com/Olivivian/PicGoImages/raw/master/img//Typora/typora-user-images/2021/09/05/image-20210905151054329.png" alt="image-20210905151054329"></p>
+<p>3、cookies设置HttpOnly</p>
+<blockquote>
+<p>这样可以禁止 JavaScript 读取某些敏感 Cookie，攻击者完成 XSS 注入后也无法窃取此 Cookie。</p>
+</blockquote>
+<p>4、验证码：防止脚本冒充用户提交危险操作❗❗❗</p>
+<p>5、少用 <code>.innerHTML</code>、<code>.outerHTML</code>、<code>document.write()</code>等直接插入html的方式，而改用安全性更高的<code>.textContent</code>、<code>.setAttribute()</code> 等</p>
+<blockquote>
+<p>避免把攻击者恶意编写的脚本注入到代码中</p>
+</blockquote>
+<p>6、注意使用DOM 中的内联事件监听器，如 <code>location</code>、<code>onclick</code>、<code>onerror</code>、<code>onload</code>、<code>onmouseover</code> 等，<code>&lt;a&gt;</code> 标签的 <code>href</code> 属性，JavaScript 的 <code>eval()</code>、<code>setTimeout()</code>、<code>setInterval()</code> 等</p>
+<blockquote>
+<p>因为它们都能把字符串作为代码运行。如果不可信的数据拼接到字符串中传递给这些 API，很容易产生安全隐患</p>
+</blockquote>
+<p>7、开启CSP防护。将CSP设置成<code>Content-Security-Policy: script-src &#39;self&#39;</code>，就可以开启。</p>
+<blockquote>
+<p>内容安全策略（CSP）的设计就是为了防御XSS攻击的，开启之后则网站将不允许内联脚本执行，禁止加载外域代码，禁止外域提交。虽然可以有效的防止XSS攻击，但是因为过于严格可能对自身业务开发造成一定的限制👉 <a href="https://developer.mozilla.org/zh-CN/docs/Web/HTTP/CSP">MDN CSP</a></p>
+</blockquote>
+<h2 id="利用现成的工具"><a href="#利用现成的工具" class="headerlink" title="利用现成的工具"></a>利用现成的工具</h2><ul>
+<li>主流框架默认防御XSS</li>
+<li>或者使用一些第三方库帮助过滤，如<a href="https://github.com/cure53/DOMPurify">DOMPurify</a> （针对 HTML、MathML 和 SVG 的仅支持DOM、快速、高容错的 XSS 过滤器）</li>
+</ul>
+<h2 id="可能被XSS攻击的实例"><a href="#可能被XSS攻击的实例" class="headerlink" title="可能被XSS攻击的实例"></a>可能被XSS攻击的实例</h2><p>1、使用<a href="https://developer.mozilla.org/zh-CN/docs/Web/API/DOMParser">DOMParser</a>把srting转化为DOM时，可能携带执行脚本（需要过滤）</p>
+<p><img src="https://gitee.com/Olivivian/PicGoImages/raw/master/img//Typora/typora-user-images/2021/09/05/image-20210905192746564.png" alt="image-20210905192746564"></p>
+<p>2、用户上传svg图片时，svg中可以内嵌sctipt标签（需要过滤）</p>
+<p><img src="https://gitee.com/Olivivian/PicGoImages/raw/master/img//Typora/typora-user-images/2021/09/05/image-20210905193418138.png" alt="image-20210905193418138"></p>
+<p>3、允许用户自定义跳转链接，a标签的跳转链接是可以被写成js代码的，所以最好不要允许</p>
+<p><img src="https://gitee.com/Olivivian/PicGoImages/raw/master/img//Typora/typora-user-images/2021/09/05/image-20210905194005432.png" alt="image-20210905194005432"></p>
+<p>4、让用户自定义样式，举个例子，假如有这样一个选项组</p>
+<p><img src="https://gitee.com/Olivivian/PicGoImages/raw/master/img//Typora/typora-user-images/2021/09/05/image-20210905194507424.png" alt="image-20210905194507424"></p>
+<p>它的选中是这样写的</p>
+<p><img src="https://gitee.com/Olivivian/PicGoImages/raw/master/img//Typora/typora-user-images/2021/09/05/image-20210905194659211.png" alt="image-20210905194659211"></p>
+<p>当用户选择指定选项时，background才切换成某一个，而此时background会发送一个get请求，并且会带上一个选中的信息，这个时候就有可能受到XSS攻击</p>
+<p>所以首先不要这样写！不要这样写！不要这样写！👻，其次需要注意类似background这种可以发送请求的属性，最后一定要用，一定记得做过滤！！！🥶</p>
+<h1 id="CSRF的防御"><a href="#CSRF的防御" class="headerlink" title="CSRF的防御"></a>CSRF的防御</h1><p>1、利用验证码，强制用户必须与应用进行交互，才能完成最终请求</p>
+<blockquote>
+<p>如果验证码使用的太频繁，会导致用户体验很不好💥，所以一般只用于特殊操作。</p>
+<p>【CSRF 攻击的过程，往往是在用户不知情的情况下发生的，在用户不知情的情况下构造网络请求】</p>
+</blockquote>
+<p>2、检查 HTTP Referer 字段</p>
+<blockquote>
+<p>根据 HTTP 协议，在 HTTP 头中有一个字段叫 Referer，它记录了该 HTTP 请求的来源地址，如果我们能判断当前HTTP请求的来源地址，只允许来自本网站的的请求才能访问，那么CSRF攻击就失效了。不过需要知道的是某些浏览器的Referer值可以被篡改。</p>
+<p>【CSRF的攻击来源通常是来自第三方网站】</p>
+</blockquote>
+<p>3、使用token，token 验证的 CSRF 防御机制是公认最合适的方案</p>
+<blockquote>
+<p>后端随机产生一个 token，把这个token 保存到 session 状态中；同时后端把这个token 交给前端，前端页面提交请求时，把 token 加入到请求数据或者头信息中，一起传给后端，端验证前端传来的 token 与 session 是否一致，不一致则拒绝该请求。</p>
+<p>【<code>CSRF</code>攻击之所以能够成功，是因为攻击者可以伪造用户的请求，该请求中所有的用户验证信息都存在于 <code>cookie</code>中，因此攻击者可以在不知道用户验证信息的情况下直接利用用户的 <code>cookie</code>来通过安全验证。】</p>
+</blockquote>
+<p>token应该和用户信息绑定，因为攻击者自己也可以通过注册用户去获取token；token应该设置过期时间；</p>
+<p><img src="https://gitee.com/Olivivian/PicGoImages/raw/master/img//Typora/typora-user-images/2021/09/05/image-20210905200730871.png" alt="image-20210905200730871"></p>
+<p>4、Cookie 的 SameSite 属性👉<a href="http://www.ruanyifeng.com/blog/2019/09/cookie-samesite.html"><code>SameSite</code>属性</a></p>
+<p>5、其他，get请求不对数据进行修改，服务器端设置 X-Frame-Options 响应头，防止页面被内嵌。</p>
+<h1 id="Injection的防御"><a href="#Injection的防御" class="headerlink" title="Injection的防御"></a>Injection的防御</h1><p>1、数据校验，还是那句话，永远不要信任用户的输入🚫</p>
+<blockquote>
+<p>对用户的输入进行校验，可以通过正则表达式，或限制长度；对单引号和双”-“进行转换等。</p>
+</blockquote>
+<p>2、不要使用动态拼装 SQL</p>
+<blockquote>
+<p>可以使用参数化的 SQL 或者直接使用存储过程进行数据查询存取。</p>
+</blockquote>
+<p>3、严格的权限管理（最小权限原则）</p>
+<blockquote>
+<p>严格限制Web应用的数据库的操作权限,只给用户提供仅仅能够满足其工作的最低权限,从而最大限度的 减少注入攻击对数据库的危害</p>
+</blockquote>
+<p>4、不要把机密信息直接存放</p>
+<blockquote>
+<p>加密或者 hash 掉密码和敏感的信息。</p>
+</blockquote>
+<p>5、特殊字符转义</p>
+<blockquote>
+<p>对进入数据库的特殊字符（’,”,,&lt;,&gt;,&amp;,*,; 等）进行转义处理,或编码转换</p>
+</blockquote>
+<p>6、查询SQL的地方使用 <a href="https://www.cnblogs.com/geaozhang/p/9891338.html">prepared statement</a></p>
+<h1 id="防御DoS和防御DDoS"><a href="#防御DoS和防御DDoS" class="headerlink" title="防御DoS和防御DDoS"></a>防御DoS和防御DDoS</h1><p>不太懂就不细说了😗</p>
+<p>SYN 攻击防护（只是DDoS的一种）：</p>
+<ol>
+<li>缩短超时（SYN Timeout）时间</li>
+<li>增加最大半连接数</li>
+<li>过滤网关防护</li>
+</ol>
+<blockquote>
+<p>哈哈哈🤣，黑客为了逼迫 Github 移除反审查项目Greatfire，对它进行了DDoS攻击</p>
+<p><a href="https://www.leiphone.com/category/gbsecurity/s6FdUv4tcJ9OJwfI.html">GitHub 遭遇有史以来最严重DDoS攻击</a></p>
+</blockquote>
+<h1 id="防御中间人"><a href="#防御中间人" class="headerlink" title="防御中间人"></a>防御中间人</h1><p>浏览器和服务器双方并没有对彼此的身份进行未验证，从而给中间人创造了攻击的条件，所以只需要增加一个安全通道来传输信息。HTTPS 就可以用来防御中间人攻击。</p>
+<blockquote>
+<p>如果你没有完全关闭 HTTP 访问的话，攻击方还是可以通过某些方式将 HTTPS 降级为 HTTP 从而实现中间人攻击。</p>
+</blockquote>
+<h1 id="个人用户的web安全建议"><a href="#个人用户的web安全建议" class="headerlink" title="个人用户的web安全建议"></a>个人用户的web安全建议</h1><p>🎨  不要忽视浏览器弹出的证书警告！你可能访问的是钓鱼网站或者假冒的服务器；</p>
+<p>🎨  建议尽量不使用公共的 Wi-Fi，因为很可能就会发生中间人攻击的情况。如果你在通信的过程中涉及到了某些敏感信息，就完全暴露给攻击方了；</p>
+<p>🎨  在任何网站上登录自己的账号前确保网址是走的HTTPS加密协议；</p>
+<p>🎨  使用网页版邮件的浏览邮件或者新闻也会带来额外的风险，因为查看邮件或者新闻消息有可能导致恶意代码的攻击。</p>
+<p>🎨 尽量不要打开可疑的链接，一定要打开时，使用不常用的浏览器。</p>
+<h1 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h1><p>防御简单的总结就是</p>
+<ul>
+<li>过滤！过滤！过滤！</li>
+<li>检查！检查！检查！</li>
+</ul>
+<h1 id="碎碎念"><a href="#碎碎念" class="headerlink" title="碎碎念"></a>碎碎念</h1><p>因为好玩去黑网站的人，还是少数的，大多数攻击都是为了有利可图，我们不可能确保自己的应用绝对无法被攻击，但是只要攻击我们的时候，黑客花费的成本远比他可以获取的利益大得多，黑客就不会去攻击。防范强如支付宝、QQ等产品，也都曾被报过漏洞，所以防御不是绝对的，我们只能想办法让我们的应用更加安全。</p>
+<p>参考资料：</p>
+<p><a href="https://cheatsheetseries.owasp.org/cheatsheets/DOM_based_XSS_Prevention_Cheat_Sheet.html">DOM based XSS Prevention Cheat Sheet</a></p>
+<p><a href="https://owasp.org/www-community/xss-filter-evasion-cheatsheet">XSS Filter Evasion Cheat Sheet</a></p>
+<p><a href="https://en.wikipedia.org/wiki/Cross-site_scripting#cite_note-11">Cross-site scripting</a></p>
+<p><a href="https://en.wikipedia.org/wiki/Cross-site_request_forgery">Cross-site request forgery</a></p>
+<p><a href="https://owasp.org/www-community/attacks/csrf">Cross Site Request Forgery (CSRF)</a></p>
+<p><a href="https://zhuanlan.zhihu.com/p/25486768?group_id=820705780520079360">谈谈对 Web 安全的理解</a></p>
+<p><a href="https://juejin.cn/post/6844903772930441230#heading-31">常见六大Web安全攻防解析</a></p>
+<p><a href="https://baike.baidu.com/item/%E4%B8%AD%E9%97%B4%E4%BA%BA%E6%94%BB%E5%87%BB/1739730?fr=aladdin">百度百科—中间人攻击</a></p>
+<p><a href="https://en.wikipedia.org/wiki/Man-in-the-middle_attack">wiki—中间人攻击</a></p>
+<blockquote>
+<p>本文作者：Axjy<br>微信公众号：Axjy前端学习库<br>版权声明：本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/cn/">CC BY-NC-SA 3.0 CN 许可协议</a>。转载请注明出处！</p>
+</blockquote>
+]]></content>
+      <categories>
+        <category>前端</category>
+      </categories>
+      <tags>
+        <tag>web安全</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>web开发安全之网站都是怎么被攻击的？</title>
+    <url>/2022/09/03/%E6%96%B0%E6%96%87%E7%AB%A0/</url>
+    <content><![CDATA[<p> <img src="/2022/09/03/%E6%96%B0%E6%96%87%E7%AB%A0/01.jpg" alt="新生"></p>
+<blockquote>
+<p>测试测试</p>
+</blockquote>
+]]></content>
+      <categories>
+        <category>前端</category>
+      </categories>
+      <tags>
+        <tag>web安全</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>终于搭好了</title>
+    <url>/2017/08/11/%E7%BB%88%E4%BA%8E%E6%90%AD%E5%A5%BD%E4%BA%86/</url>
+    <content><![CDATA[<p> <img src="/2017/08/11/%E7%BB%88%E4%BA%8E%E6%90%AD%E5%A5%BD%E4%BA%86/01.jpg" alt="新生"></p>
+<blockquote>
+<p>发布第一篇文章，用于测试。<br>嗯，这是一篇非常正经的测试（吐槽）文章</p>
+</blockquote>
+<p>花了两天的时间终于把自己的独立博客搭好，虽然博客在哪都能写，但是看别人的独立博客还可以自己定制功能，感觉很有意思的样子，便利用空闲时间去网上搜教程准备自己也搭一个。    </p>
+<p>   网上有很多教程，但有的时候多也不是一个好事，在众多教程中挑了一个看上去还比较详细的教程照着搭。一直搭到本地测试都没有问题，部署到github之后以为就要搞定了，结果输入地址，出现的却是404页面。然后接着就是各种找解决的办法了，这心酸的过程就不多说，反正最后终于还是让我搞出来了，哈哈哈！</p>
+<p>其实如果只是搭一个基本框架出来是花不了多久的，但是就像盖房子，房子盖好了，你能忍受不去装修它么。我搭好的第一件事就是去把默认的主题换了，光是选主题就花了我大半天的时间，因为我既希望它好看，又希望它简洁，我把Hexo官网的所有主题都看了一遍，最后选择了next主题，其实还有其它几款主题感觉也不错，但是next详细的使用文档让人无法拒绝它。房子装修完就该放家具了，现在还在慢慢放家具中，所以此处先略过以后再说。</p>
+<p>  这期间最难过的不是搭建的过程，也不是搭建出现的错误，而是已经很久没有生过病的我竟然在这大夏天感冒了。经历过才知道备一些常用药的重要性，因为你不一定会有时间去医院。发着烧去挤轻轨，头晕的厉害，感觉特别难受，当时还有闲心想还好没有座位，避免了让座的尴尬，因为这个时候坐下估计就不想起来了。之前一直不知道原来感冒还分风寒感冒和风热感冒，开始吃的是朋友备的感冒药，但是效果不大，之后去药房拿药才知道我是风热感冒，而朋友的是风寒感冒药，这真是吃个感冒药也是有大学问。</p>
+]]></content>
+      <categories>
+        <category>碎碎念</category>
+      </categories>
+      <tags>
+        <tag>闲谈</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>用于测试</title>
+    <url>/2017/08/11/%E6%B5%8B%E8%AF%95%E6%96%87%E7%AB%A0/</url>
+    <content><![CDATA[<p> <img src="/2017/08/11/%E6%B5%8B%E8%AF%95%E6%96%87%E7%AB%A0/01.jpg" alt="新生"></p>
+<blockquote>
+<p>测试测试</p>
+</blockquote>
+]]></content>
+      <categories>
+        <category>碎碎念</category>
+      </categories>
+      <tags>
+        <tag>闲谈</tag>
       </tags>
   </entry>
 </search>
