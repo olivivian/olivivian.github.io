@@ -4,7 +4,7 @@ date:
 tags: web安全
 categories: 前端
 photos:
-  - https://gitee.com/Olivivian/PicGoImages/raw/master/img//Typora/typora-user-images/2021/09/05/image-20210905230319368.png
+  - https://imgstorage-1313684358.cos.ap-nanjing.myqcloud.com//Typora/typora-user-images/2021/09/05/image-20210905230319368.png
 ---
 
 
@@ -37,7 +37,7 @@ photos:
 
 2、不要将用户提交内容直接插入到页面，建议做一些HTML转义操作
 
-![image-20210905151054329](https://gitee.com/Olivivian/PicGoImages/raw/master/img//Typora/typora-user-images/2021/09/05/image-20210905151054329.png)
+![image-20210905151054329](https://imgstorage-1313684358.cos.ap-nanjing.myqcloud.com//Typora/typora-user-images/2021/09/05/image-20210905151054329.png)
 
 3、cookies设置HttpOnly
 
@@ -80,25 +80,25 @@ photos:
 
 1、使用[DOMParser](https://developer.mozilla.org/zh-CN/docs/Web/API/DOMParser)把srting转化为DOM时，可能携带执行脚本（需要过滤）
 
-![image-20210905192746564](https://gitee.com/Olivivian/PicGoImages/raw/master/img//Typora/typora-user-images/2021/09/05/image-20210905192746564.png)
+![image-20210905192746564](https://imgstorage-1313684358.cos.ap-nanjing.myqcloud.com//Typora/typora-user-images/2021/09/05/image-20210905192746564.png)
 
 
 
 2、用户上传svg图片时，svg中可以内嵌sctipt标签（需要过滤）
 
-![image-20210905193418138](https://gitee.com/Olivivian/PicGoImages/raw/master/img//Typora/typora-user-images/2021/09/05/image-20210905193418138.png)
+![image-20210905193418138](https://imgstorage-1313684358.cos.ap-nanjing.myqcloud.com//Typora/typora-user-images/2021/09/05/image-20210905193418138.png)
 
 3、允许用户自定义跳转链接，a标签的跳转链接是可以被写成js代码的，所以最好不要允许
 
-![image-20210905194005432](https://gitee.com/Olivivian/PicGoImages/raw/master/img//Typora/typora-user-images/2021/09/05/image-20210905194005432.png)
+![image-20210905194005432](https://imgstorage-1313684358.cos.ap-nanjing.myqcloud.com//Typora/typora-user-images/2021/09/05/image-20210905194005432.png)
 
 4、让用户自定义样式，举个例子，假如有这样一个选项组
 
-![image-20210905194507424](https://gitee.com/Olivivian/PicGoImages/raw/master/img//Typora/typora-user-images/2021/09/05/image-20210905194507424.png)
+![image-20210905194507424](https://imgstorage-1313684358.cos.ap-nanjing.myqcloud.com//Typora/typora-user-images/2021/09/05/image-20210905194507424.png)
 
 它的选中是这样写的
 
-![image-20210905194659211](https://gitee.com/Olivivian/PicGoImages/raw/master/img//Typora/typora-user-images/2021/09/05/image-20210905194659211.png)
+![image-20210905194659211](https://imgstorage-1313684358.cos.ap-nanjing.myqcloud.com//Typora/typora-user-images/2021/09/05/image-20210905194659211.png)
 
 当用户选择指定选项时，background才切换成某一个，而此时background会发送一个get请求，并且会带上一个选中的信息，这个时候就有可能受到XSS攻击
 
@@ -138,7 +138,7 @@ photos:
 
 token应该和用户信息绑定，因为攻击者自己也可以通过注册用户去获取token；token应该设置过期时间；
 
-![image-20210905200730871](https://gitee.com/Olivivian/PicGoImages/raw/master/img//Typora/typora-user-images/2021/09/05/image-20210905200730871.png)
+![image-20210905200730871](https://imgstorage-1313684358.cos.ap-nanjing.myqcloud.com//Typora/typora-user-images/2021/09/05/image-20210905200730871.png)
 
 
 

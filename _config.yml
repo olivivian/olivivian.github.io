@@ -7,14 +7,14 @@ title: JinBlog
 subtitle: 前端开发探索
 description: 微信搜索“Axjy前端学习库”
 author: Axjy
-language: zh-Hans
+language: zh-CN
 timezone:
 keywords: "前端,js,jquery,javascript,html5,开发者,程序猿,程序媛,极客,编程,代码,开源,IT网站,Developer,Programmer,Coder,Geek,html,css,css3,用户体验"
 
 # URL
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
-url: http://yoursite.com
-root: /
+url: http://124.220.189.82/home/git/hexo.git
+root: /  # 如果是github的设置为 /
 permalink: :year/:month/:day/:title/
 permalink_defaults:
 
@@ -72,14 +72,16 @@ pagination_dir: page
 
 # Extensions
 ## Plugins: https://hexo.io/plugins/
-## Themes: https://hexo.io/themes/
-theme: next
+## Themes: https://hexo.io/themes/ landscape
+## matery：https://github.com/blinkfox/hexo-theme-matery
+theme: matery
 
 # Deployment
 ## Docs: https://hexo.io/docs/deployment.html
 deploy:
   type: git
-  repository: git@github.com:olivivian/olivivian.github.io.git
+  repository: git@124.220.189.82:/home/git/hexo.git
+  # repository: git@github.com:olivivian/olivivian.github.io.git
   branch: master
 
 #search
@@ -89,3 +91,7 @@ search:
   format: html
   limit: 10000
 
+#permalink_pinyin
+permalink_pinyin:
+  enable: true
+  separator: '-' # default: '-'

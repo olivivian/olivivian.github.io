@@ -5,7 +5,7 @@ date:
 tags: CSS
 categories: 前端
 photos:
-  - https://gitee.com/Olivivian/PicGoImages/raw/master/img//00juejincundang/%E5%B0%81%E9%9D%A2/2021/10/02/UYW-B-0FT-RMU-9-G-OODSQ.png
+  - https://imgstorage-1313684358.cos.ap-nanjing.myqcloud.com//00juejincundang/%E5%B0%81%E9%9D%A2/2021/10/02/UYW-B-0FT-RMU-9-G-OODSQ.png
 ---
 
 
@@ -21,7 +21,7 @@ photos:
 
 在具体介绍布局相关的属性之前，先要了解:在CSS中，所有的元素都被一个个的“盒子(box)”包围着，理解这些“盒子”的基本原理，是我们使用CSS实现准确布局、处理元素排列的关键。
 
-![image-20210815215329724](https://gitee.com/Olivivian/PicGoImages/raw/master/img//Typora/typora-user-images/2021/08/15/image-20210815215329724.png)
+![image-20210815215329724](https://imgstorage-1313684358.cos.ap-nanjing.myqcloud.com//Typora/typora-user-images/2021/08/15/image-20210815215329724.png)
 
 
 
@@ -215,7 +215,7 @@ background-image:url(img/*.jpg);
 
 盒子阴影
 
-![image-20210815230238248](https://gitee.com/Olivivian/PicGoImages/raw/master/img//Typora/typora-user-images/2021/08/15/image-20210815230238248.png)
+![image-20210815230238248](https://imgstorage-1313684358.cos.ap-nanjing.myqcloud.com//Typora/typora-user-images/2021/08/15/image-20210815230238248.png)
 
 >[MDN CSS box-shadow 属性](https://developer.mozilla.org/zh-CN/docs/Web/CSS/box-shadow)
 >
@@ -225,7 +225,7 @@ background-image:url(img/*.jpg);
 
 文字阴影
 
-![image-20210815230221504](https://gitee.com/Olivivian/PicGoImages/raw/master/img//Typora/typora-user-images/2021/08/15/image-20210815230221504.png)
+![image-20210815230221504](https://imgstorage-1313684358.cos.ap-nanjing.myqcloud.com//Typora/typora-user-images/2021/08/15/image-20210815230221504.png)
 
 > [MDN text-shadow](https://developer.mozilla.org/zh-CN/docs/Web/CSS/text-shadow) 
 
@@ -279,7 +279,7 @@ transform
 
 - 在面板里，你可以直接开关、编辑、新增属性的值。
 
-![image-20210815231547558](https://gitee.com/Olivivian/PicGoImages/raw/master/img//Typora/typora-user-images/2021/08/15/image-20210815231547558.png)
+![image-20210815231547558](https://imgstorage-1313684358.cos.ap-nanjing.myqcloud.com//Typora/typora-user-images/2021/08/15/image-20210815231547558.png)
 
 
 

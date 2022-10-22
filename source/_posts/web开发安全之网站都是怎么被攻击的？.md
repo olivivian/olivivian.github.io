@@ -4,7 +4,7 @@ date:
 tags: web安全
 categories: 前端
 photos:
-  - https://gitee.com/Olivivian/PicGoImages/raw/master/img//00%E8%B5%84%E6%96%99/00juejincundang/2021/09/05/%7B0AK-BBO2I-GBT%7BZJLNXVXB.png
+  - https://imgstorage-1313684358.cos.ap-nanjing.myqcloud.com//00%E8%B5%84%E6%96%99/00juejincundang/2021/09/05/%7B0AK-BBO2I-GBT%7BZJLNXVXB.png
 ---
 
 在互联网时代，数据安全和个人隐私一直都是大家很关心的问题，怎么才能更好的保护我们的数据呢？俗话说要知己知彼才能百战不殆，所以先来了解一下Web安全中的各种攻击的类型及原理吧！🤗
@@ -21,7 +21,7 @@ photos:
 
 
 
-![image-20210905154811350](https://gitee.com/Olivivian/PicGoImages/raw/master/img//Typora/typora-user-images/2021/09/05/image-20210905154811350.png)
+![image-20210905154811350](https://imgstorage-1313684358.cos.ap-nanjing.myqcloud.com/Typora/typora-user-images/2021/09/05/image-20210905154811350.png)
 
 # Cross-Site Scripting(XSS)
 
@@ -29,7 +29,7 @@ photos:
 
 
 
-![image-20210903203022807](https://gitee.com/Olivivian/PicGoImages/raw/master/img//Typora/typora-user-images/2021/09/03/image-20210903203022807.png)
+![image-20210903203022807](https://imgstorage-1313684358.cos.ap-nanjing.myqcloud.com/Typora/typora-user-images/2021/09/03/image-20210903203022807.png)
 
 **XSS的一些特点**
 
@@ -55,7 +55,7 @@ photos:
 
 一般存在于 Form 表单提交等交互功能，如文章留言，提交文本信息等，攻击者利用XSS漏洞，将内容经正常功能提交进入数据库持久保存，当前端页面获得后端从数据库中读出的注入代码时，恰好将其渲染执行。
 
-![image-20210904153932547](https://gitee.com/Olivivian/PicGoImages/raw/master/img//Typora/typora-user-images/2021/09/04/image-20210904153932547.png)
+![image-20210904153932547](https://imgstorage-1313684358.cos.ap-nanjing.myqcloud.com//Typora/typora-user-images/2021/09/04/image-20210904153932547.png)
 
 
 
@@ -63,7 +63,7 @@ photos:
 
 
 
-![image-20210904143510982](https://gitee.com/Olivivian/PicGoImages/raw/master/img//Typora/typora-user-images/2021/09/04/image-20210904143510982.png)
+![image-20210904143510982](https://imgstorage-1313684358.cos.ap-nanjing.myqcloud.com//Typora/typora-user-images/2021/09/04/image-20210904143510982.png)
 
 
 
@@ -90,7 +90,7 @@ photos:
 - 不涉及数据库
 - 从URL上攻击
 
-![image-20210904154116682](https://gitee.com/Olivivian/PicGoImages/raw/master/img//Typora/typora-user-images/2021/09/04/image-20210904154116682.png)
+![image-20210904154116682](https://imgstorage-1313684358.cos.ap-nanjing.myqcloud.com//Typora/typora-user-images/2021/09/04/image-20210904154116682.png)
 
 
 
@@ -98,19 +98,19 @@ photos:
 
 现在页面上有一个输入框，用来提交姓名，提交到服务器端时，服务器立即解析并且直接渲染到页面上。
 
-![image-20210904120554945](https://gitee.com/Olivivian/PicGoImages/raw/master/img//Typora/typora-user-images/2021/09/04/image-20210904120554945.png)
+![image-20210904120554945](https://imgstorage-1313684358.cos.ap-nanjing.myqcloud.com//Typora/typora-user-images/2021/09/04/image-20210904120554945.png)
 
 
 
 假如没有做任何防护，我们就可以直接通过这个输入框注入脚本，完成一次XSS攻击
 
-![image-20210904121908119](https://gitee.com/Olivivian/PicGoImages/raw/master/img//Typora/typora-user-images/2021/09/04/image-20210904121908119.png)
+![image-20210904121908119](https://imgstorage-1313684358.cos.ap-nanjing.myqcloud.com//Typora/typora-user-images/2021/09/04/image-20210904121908119.png)
 
 当前我直接输入了script脚本，提交的时候，脚本被执行了，单单这样看好像没看出有什么危害🤔
 
 那我们换个写法，现在已知这个地址接受name参数，并且无任何防护，如果我们现在给name注入这么一段代码
 
-![image-20210905231910960](https://gitee.com/Olivivian/PicGoImages/raw/master/img//Typora/typora-user-images/2021/09/05/image-20210905231910960.png)
+![image-20210905231910960](https://imgstorage-1313684358.cos.ap-nanjing.myqcloud.com//Typora/typora-user-images/2021/09/05/image-20210905231910960.png)
 
 然后用户点击了我们改造的这个链接会发生什么？
 
@@ -118,7 +118,7 @@ photos:
 
 > 如果直接在浏览器测试，script可能不会生效，因为现在大部分浏览器都会针对`script`等一些危险标签的插入会做拦截过滤，你可以这样改写
 >
-> ![image-20210905231942747](https://gitee.com/Olivivian/PicGoImages/raw/master/img//Typora/typora-user-images/2021/09/05/image-20210905231942747.png)
+> ![image-20210905231942747](https://imgstorage-1313684358.cos.ap-nanjing.myqcloud.com//Typora/typora-user-images/2021/09/05/image-20210905231942747.png)
 > 
 > 因为是插入一张图片，浏览器一般不会过滤拦截，然后把`src`置空使其触发`onerror`事件，恶意脚本就会间接地被执行；
 
@@ -143,35 +143,35 @@ photos:
 
 还是先来看一个例子，假设以下代码用于创建一个表单，让用户选择他们喜欢的语言。查询字符串中还提供了默认语言，作为参数“default”。
 
-![image-20210905232008016](https://gitee.com/Olivivian/PicGoImages/raw/master/img//Typora/typora-user-images/2021/09/05/image-20210905232008016.png)
+![image-20210905232008016](https://imgstorage-1313684358.cos.ap-nanjing.myqcloud.com//Typora/typora-user-images/2021/09/05/image-20210905232008016.png)
 
-![image-20210905210650632](https://gitee.com/Olivivian/PicGoImages/raw/master/img//Typora/typora-user-images/2021/09/05/image-20210905210650632.png)
+![image-20210905210650632](https://imgstorage-1313684358.cos.ap-nanjing.myqcloud.com//Typora/typora-user-images/2021/09/05/image-20210905210650632.png)
 
 该页面是使用 URL 调用的，例如：
 
-![image-20210905232025458](https://gitee.com/Olivivian/PicGoImages/raw/master/img//Typora/typora-user-images/2021/09/05/image-20210905232025458.png)
+![image-20210905232025458](https://imgstorage-1313684358.cos.ap-nanjing.myqcloud.com//Typora/typora-user-images/2021/09/05/image-20210905232025458.png)
 
 针对该页面的基于 DOM 的 XSS 攻击可以通过向受害者发送以下 URL 来完成：
 
-![image-20210905232039405](https://gitee.com/Olivivian/PicGoImages/raw/master/img//Typora/typora-user-images/2021/09/05/image-20210905232039405.png)
+![image-20210905232039405](https://imgstorage-1313684358.cos.ap-nanjing.myqcloud.com//Typora/typora-user-images/2021/09/05/image-20210905232039405.png)
 
 当受害者点击这个链接时，浏览器会发送一个请求：
 
-![image-20210905232052579](https://gitee.com/Olivivian/PicGoImages/raw/master/img//Typora/typora-user-images/2021/09/05/image-20210905232052579.png)
+![image-20210905232052579](https://imgstorage-1313684358.cos.ap-nanjing.myqcloud.com//Typora/typora-user-images/2021/09/05/image-20210905232052579.png)
 
 到 www.some.site。服务器以包含上述 Javascript 代码的页面进行响应。浏览器为页面创建一个 DOM 对象，其中 document.location 对象包含字符串：
 
-![image-20210905232105798](https://gitee.com/Olivivian/PicGoImages/raw/master/img//Typora/typora-user-images/2021/09/05/image-20210905232105798.png)
+![image-20210905232105798](https://imgstorage-1313684358.cos.ap-nanjing.myqcloud.com//Typora/typora-user-images/2021/09/05/image-20210905232105798.png)
 
 页面中的原始 Javascript 代码不希望默认参数包含 HTML 标记，因此它只是在运行时对其进行解码并将其回显到页面 (DOM) 中。然后浏览器呈现结果页面并执行攻击者的脚本：
 
-![image-20210905232118412](https://gitee.com/Olivivian/PicGoImages/raw/master/img//Typora/typora-user-images/2021/09/05/image-20210905232118412.png)
+![image-20210905232118412](https://imgstorage-1313684358.cos.ap-nanjing.myqcloud.com//Typora/typora-user-images/2021/09/05/image-20210905232118412.png)
 
 看到这里是不是觉得，这不是和上面的反射性一样吗？🤨
 
 首先从两个示例的链接来看,结构完全一样，但是如果我们这样改造一下，把`？号`改成`#号`
 
-![image-20210905232159500](https://gitee.com/Olivivian/PicGoImages/raw/master/img//Typora/typora-user-images/2021/09/05/image-20210905232159500.png)
+![image-20210905232159500](https://imgstorage-1313684358.cos.ap-nanjing.myqcloud.com//Typora/typora-user-images/2021/09/05/image-20210905232159500.png)
 
 在尝试执行，会发现，Reflected XSS（反射型）不在生效，而DOM-based XSS（基于DOM）的攻击依然生效。
 
@@ -185,7 +185,7 @@ photos:
 
 Reflected XSS（反射型）和DOM-based XSS（基于DOM）的区别就是完成注入脚本的地方不同，在基于 DOM 的 XSS 攻击中，恶意数据不会触及 Web 服务器。相反，它由 JavaScript 代码完全反映在客户端。
 
-![image-20210903203703407](https://gitee.com/Olivivian/PicGoImages/raw/master/img//Typora/typora-user-images/2021/09/03/image-20210903203703407.png)
+![image-20210903203703407](https://imgstorage-1313684358.cos.ap-nanjing.myqcloud.com//Typora/typora-user-images/2021/09/03/image-20210903203703407.png)
 
 ## Mutation-based XSS
 
@@ -201,7 +201,7 @@ Reflected XSS（反射型）和DOM-based XSS（基于DOM）的区别就是完成
 
 不论是服务器端或客户端的XSS过滤器，都认定过滤后的HTML源代码应该与浏览器所渲染后的HTML代码保持一致，至少不会出现很大的出入。
 
-![image-20210904223150612](https://gitee.com/Olivivian/PicGoImages/raw/master/img//Typora/typora-user-images/2021/09/04/image-20210904223150612.png)
+![image-20210904223150612](https://imgstorage-1313684358.cos.ap-nanjing.myqcloud.com//Typora/typora-user-images/2021/09/04/image-20210904223150612.png)
 
 
 
@@ -213,19 +213,19 @@ Reflected XSS（反射型）和DOM-based XSS（基于DOM）的区别就是完成
 
 > 这种由于HTML内容进入innerHTML后发生意外变化，而最终导致XSS的攻击流程，被称为突变XSS
 
-![image-20210904160201378](https://gitee.com/Olivivian/PicGoImages/raw/master/img//Typora/typora-user-images/2021/09/04/image-20210904160201378.png)
+![image-20210904160201378](https://imgstorage-1313684358.cos.ap-nanjing.myqcloud.com//Typora/typora-user-images/2021/09/04/image-20210904160201378.png)
 
 
 
 mXSS的几种类型，下面我们挑几个来说，想要了解更多可以看这篇文章👉 [fp170.pdf]( https://cure53.de/fp170.pdf)  
 
-![image-20210904230038546](https://gitee.com/Olivivian/PicGoImages/raw/master/img//Typora/typora-user-images/2021/09/04/image-20210904230038546.png)
+![image-20210904230038546](https://imgstorage-1313684358.cos.ap-nanjing.myqcloud.com//Typora/typora-user-images/2021/09/04/image-20210904230038546.png)
 
 ### 3.1 Backtick Characters breaking Attribute Delimiter Syntax
 
 反引号打破属性边界导致的 mXSS
 
-![image-20210904231020779](https://gitee.com/Olivivian/PicGoImages/raw/master/img//Typora/typora-user-images/2021/09/04/image-20210904231020779.png)
+![image-20210904231020779](https://imgstorage-1313684358.cos.ap-nanjing.myqcloud.com//Typora/typora-user-images/2021/09/04/image-20210904231020779.png)
 
 可以看到，突变后的形式变成了有效的XSS攻击
 
@@ -237,7 +237,7 @@ CSS中反斜线转义导致的mXSS
 
 
 
-![image-20210904231549813](https://gitee.com/Olivivian/PicGoImages/raw/master/img//Typora/typora-user-images/2021/09/04/image-20210904231549813.png)
+![image-20210904231549813](https://imgstorage-1313684358.cos.ap-nanjing.myqcloud.com//Typora/typora-user-images/2021/09/04/image-20210904231549813.png)
 
 
 
@@ -249,7 +249,7 @@ CSS中反斜线转义导致的mXSS
 
 CSS中双引号实体或转义导致的mXSS
 
-![image-20210904234016829](https://gitee.com/Olivivian/PicGoImages/raw/master/img//Typora/typora-user-images/2021/09/04/image-20210904234016829.png)
+![image-20210904234016829](https://imgstorage-1313684358.cos.ap-nanjing.myqcloud.com//Typora/typora-user-images/2021/09/04/image-20210904234016829.png)
 
 >一些浏览器中，使用 CSS 字符串中的字符，渲染引擎将它们转换为单引号，不管这两个字符看起来不相关。 这意味着 \22,
 >&quot;, &#x22; 和 &#34; 字符序列将在 innerHTML 访问时转换为 ’ 字符。
@@ -268,7 +268,7 @@ CSS中双引号实体或转义导致的mXSS
 
 CSS属性名中的转义所导致的mXSS
 
-![image-20210904235230335](https://gitee.com/Olivivian/PicGoImages/raw/master/img//Typora/typora-user-images/2021/09/04/image-20210904235230335.png)
+![image-20210904235230335](https://imgstorage-1313684358.cos.ap-nanjing.myqcloud.com//Typora/typora-user-images/2021/09/04/image-20210904235230335.png)
 
 >之前说的都是在 CSS 属性值中的一些情况，如果是在CSS 属性名称中使用，也会迫使一些浏览器进入完全不同的行为；
 >
@@ -304,7 +304,7 @@ CSRF 是一种诱骗受害者提交恶意请求的攻击。它继承了受害者
 
 **CSRF的攻击流程**
 
-![image-20210905010637766](https://gitee.com/Olivivian/PicGoImages/raw/master/img//Typora/typora-user-images/2021/09/05/image-20210905010637766.png)
+![image-20210905010637766](https://imgstorage-1313684358.cos.ap-nanjing.myqcloud.com//Typora/typora-user-images/2021/09/05/image-20210905010637766.png)
 
 
 
@@ -322,7 +322,7 @@ CSRF 是一种诱骗受害者提交恶意请求的攻击。它继承了受害者
 
 
 
-![image-20210903205030750](https://gitee.com/Olivivian/PicGoImages/raw/master/img//Typora/typora-user-images/2021/09/03/image-20210903205030750.png)
+![image-20210903205030750](https://imgstorage-1313684358.cos.ap-nanjing.myqcloud.com//Typora/typora-user-images/2021/09/03/image-20210903205030750.png)
 
 
 
@@ -332,11 +332,11 @@ CSRF 是一种诱骗受害者提交恶意请求的攻击。它继承了受害者
 
 假如应用程序设计为主要使用 GET 请求来传输参数和执行操作，则汇款操作可能会简化为如下请求
 
-![image-20210905232220622](https://gitee.com/Olivivian/PicGoImages/raw/master/img//Typora/typora-user-images/2021/09/05/image-20210905232220622.png)
+![image-20210905232220622](https://imgstorage-1313684358.cos.ap-nanjing.myqcloud.com//Typora/typora-user-images/2021/09/05/image-20210905232220622.png)
 
 【hacker😈】现在决定使用【张三😇】作为受害者来利用此 Web 应用程序漏洞。【hacker】 首先利用漏洞来构建以下 URL，该 URL 将从【张三】的账户转移 100,000 元到 【hacker】 的账户。【hacker】使用原始命令 URL 并将收款人名称替换为自己，同时显着提高了转账金额：
 
-![image-20210905232233680](https://gitee.com/Olivivian/PicGoImages/raw/master/img//Typora/typora-user-images/2021/09/05/image-20210905232233680.png)
+![image-20210905232233680](https://imgstorage-1313684358.cos.ap-nanjing.myqcloud.com//Typora/typora-user-images/2021/09/05/image-20210905232233680.png)
 
 当【张三】登录到银行应用程序时，诱导他来点击恶意的URL，通常会这样做
 
@@ -345,11 +345,11 @@ CSRF 是一种诱骗受害者提交恶意请求的攻击。它继承了受害者
 
 漏洞利用 URL 可以伪装成一个普通的链接，鼓励受害者点击它，如伪装成一个抽奖链接
 
-![image-20210905232246808](https://gitee.com/Olivivian/PicGoImages/raw/master/img//Typora/typora-user-images/2021/09/05/image-20210905232246808.png)
+![image-20210905232246808](https://imgstorage-1313684358.cos.ap-nanjing.myqcloud.com//Typora/typora-user-images/2021/09/05/image-20210905232246808.png)
 
 或者作为 0x0 假图像发送给【张三】
 
-![image-20210905232304499](https://gitee.com/Olivivian/PicGoImages/raw/master/img//Typora/typora-user-images/2021/09/05/image-20210905232304499.png)
+![image-20210905232304499](https://imgstorage-1313684358.cos.ap-nanjing.myqcloud.com//Typora/typora-user-images/2021/09/05/image-20210905232304499.png)
 
 如果此图像标签包含在电子邮件中，【张三】将看不到任何内容。但是，浏览器*仍会*向 bank.com 提交汇款请求，在【张三】毫不知情的情况下，他的钱就被转走啦！🥶
 
@@ -359,15 +359,15 @@ CSRF 是一种诱骗受害者提交恶意请求的攻击。它继承了受害者
 
 GET 和 POST 攻击之间的唯一区别是受害者如何执行攻击。假设银行现在使用 POST 并且易受攻击的请求如下所示：
 
-![image-20210905232316001](https://gitee.com/Olivivian/PicGoImages/raw/master/img//Typora/typora-user-images/2021/09/05/image-20210905232316001.png)
+![image-20210905232316001](https://imgstorage-1313684358.cos.ap-nanjing.myqcloud.com//Typora/typora-user-images/2021/09/05/image-20210905232316001.png)
 
 此类请求无法通过a标签链接 或 IMG 标签传递，但可以使用 FORM 标签传递：
 
-![image-20210905232326918](https://gitee.com/Olivivian/PicGoImages/raw/master/img//Typora/typora-user-images/2021/09/05/image-20210905232326918.png)
+![image-20210905232326918](https://imgstorage-1313684358.cos.ap-nanjing.myqcloud.com//Typora/typora-user-images/2021/09/05/image-20210905232326918.png)
 
 这个表单将要求用户单击提交按钮，但这也可以使用 JavaScript 自动执行：
 
-![image-20210905232341528](https://gitee.com/Olivivian/PicGoImages/raw/master/img//Typora/typora-user-images/2021/09/05/image-20210905232341528.png)
+![image-20210905232341528](https://imgstorage-1313684358.cos.ap-nanjing.myqcloud.com//Typora/typora-user-images/2021/09/05/image-20210905232341528.png)
 
 这样在受害者不知情的情况下，钱又被转走啦！🥶🥶🥶
 
@@ -390,29 +390,29 @@ GET 和 POST 攻击之间的唯一区别是受害者如何执行攻击。假设�
 
 所谓 SQL 注入，就是通过把 SQL 命令插入到 Web 表单提交或页面请求的查询字符串，最终执行恶意的 SQL 命令。
 
-![image-20210903211351360](https://gitee.com/Olivivian/PicGoImages/raw/master/img//Typora/typora-user-images/2021/09/03/image-20210903211351360.png)
+![image-20210903211351360](https://imgstorage-1313684358.cos.ap-nanjing.myqcloud.com//Typora/typora-user-images/2021/09/03/image-20210903211351360.png)
 
 以常用的登录为例，表单代码如下
 
-![image-20210905232355409](https://gitee.com/Olivivian/PicGoImages/raw/master/img//Typora/typora-user-images/2021/09/05/image-20210905232355409.png)
+![image-20210905232355409](https://imgstorage-1313684358.cos.ap-nanjing.myqcloud.com//Typora/typora-user-images/2021/09/05/image-20210905232355409.png)
 
 后端的 SQL 语句可能是这样的
 
-![image-20210905232407080](https://gitee.com/Olivivian/PicGoImages/raw/master/img//Typora/typora-user-images/2021/09/05/image-20210905232407080.png)
+![image-20210905232407080](https://imgstorage-1313684358.cos.ap-nanjing.myqcloud.com//Typora/typora-user-images/2021/09/05/image-20210905232407080.png)
 
 但如果有一个恶意攻击者输入的用户名是 `admin' --`，密码随意输入，就可以直接登入系统了，为什么？
 
 因为本来预想的SQL 语句是
 
-![image-20210905232419995](https://gitee.com/Olivivian/PicGoImages/raw/master/img//Typora/typora-user-images/2021/09/05/image-20210905232419995.png)
+![image-20210905232419995](https://imgstorage-1313684358.cos.ap-nanjing.myqcloud.com//Typora/typora-user-images/2021/09/05/image-20210905232419995.png)
 
 但是恶意攻击者用奇怪用户名将你的 SQL 语句变成了如下形式
 
-![image-20210905232431571](https://gitee.com/Olivivian/PicGoImages/raw/master/img//Typora/typora-user-images/2021/09/05/image-20210905232431571.png)
+![image-20210905232431571](https://imgstorage-1313684358.cos.ap-nanjing.myqcloud.com//Typora/typora-user-images/2021/09/05/image-20210905232431571.png)
 
 在 SQL 中,`' --`是闭合和注释的意思，-- 是注释后面的内容的意思，所以查询语句就变成了
 
-![image-20210905232446277](https://gitee.com/Olivivian/PicGoImages/raw/master/img//Typora/typora-user-images/2021/09/05/image-20210905232446277.png)
+![image-20210905232446277](https://imgstorage-1313684358.cos.ap-nanjing.myqcloud.com//Typora/typora-user-images/2021/09/05/image-20210905232446277.png)
 
 
 
@@ -431,7 +431,7 @@ GET 和 POST 攻击之间的唯一区别是受害者如何执行攻击。假设�
 
 假如需要实现一个需求：用户提交一些内容到服务器，然后在服务器执行一些系统命令去返回一个结果给用户
 
-![image-20210905232506517](https://gitee.com/Olivivian/PicGoImages/raw/master/img//Typora/typora-user-images/2021/09/05/image-20210905232506517.png)
+![image-20210905232506517](https://imgstorage-1313684358.cos.ap-nanjing.myqcloud.com//Typora/typora-user-images/2021/09/05/image-20210905232506517.png)
 
 如果 `params.repo` 传入的是 `https://github.com/admin/admin.github.io.git` 确实能从指定的 git repo 上下载到想要的代码。 但是如果 `params.repo` 传入的是 `https://github.com/xx/xx.git && rm -rf /* &&`， 恰好你的服务是用 root 权限起的就糟糕了。
 
@@ -453,7 +453,7 @@ DoS(Denial of Service)，即拒绝服务，造成远程服务器拒绝服务的�
 
 根据正则的贪婪模式特性构造正则表达式，使其因为一直匹配不上，导致接口的响应时间变长
 
-![image-20210903212045717](https://gitee.com/Olivivian/PicGoImages/raw/master/img//Typora/typora-user-images/2021/09/03/image-20210903212045717.png)
+![image-20210903212045717](https://imgstorage-1313684358.cos.ap-nanjing.myqcloud.com//Typora/typora-user-images/2021/09/03/image-20210903212045717.png)
 
 
 
@@ -487,17 +487,17 @@ SYN 攻击指的是，攻击客户端在短时间内伪造大量不存在的 IP 
 
 由于源地址是不存在的，服务器需要不断的重发直至超时，这些伪造的 SYN 包将长时间占用未连接队列，正常的 SYN 请求被丢弃，导致目标系统运行缓慢，严重者会引起网络堵塞甚至系统瘫痪。
 
-![image-20210903212508238](https://gitee.com/Olivivian/PicGoImages/raw/master/img//Typora/typora-user-images/2021/09/03/image-20210903212508238.png)
+![image-20210903212508238](https://imgstorage-1313684358.cos.ap-nanjing.myqcloud.com//Typora/typora-user-images/2021/09/03/image-20210903212508238.png)
 
 **打个比方**
 
 一群恶霸试图让对面那家有着竞争关系的商铺无法正常营业，他们会采取什么手段呢？（只为举例，切勿模仿）
 
-![image-20210905021614078](https://gitee.com/Olivivian/PicGoImages/raw/master/img//Typora/typora-user-images/2021/09/05/image-20210905021614078.png)
+![image-20210905021614078](https://imgstorage-1313684358.cos.ap-nanjing.myqcloud.com//Typora/typora-user-images/2021/09/05/image-20210905021614078.png)
 
 恶霸们扮作普通客户一直拥挤在对手的商铺，赖着不走，真正的购物者却无法进入；或者总是和营业员有一搭没一搭的东扯西扯，让工作人员不能正常服务客户；也可以为商铺的经营者提供虚假信息，商铺的上上下下忙成一团之后却发现都是一场空，最终跑了真正的大客户，损失惨重。
 
-![image-20210905021944509](https://gitee.com/Olivivian/PicGoImages/raw/master/img//Typora/typora-user-images/2021/09/05/image-20210905021944509.png)
+![image-20210905021944509](https://imgstorage-1313684358.cos.ap-nanjing.myqcloud.com//Typora/typora-user-images/2021/09/05/image-20210905021944509.png)
 
 此外恶霸们完成这些坏事有时凭单干难以完成，需要叫上很多人一起。网络安全领域中 DoS 和 DDoS 攻击就遵循着这些思路。
 
@@ -511,7 +511,7 @@ SYN 攻击指的是，攻击客户端在短时间内伪造大量不存在的 IP 
 
 > 直白的说就是，浏览器和服务器彼此以为在互相沟通，但实际上有一个中间人在里面插了插了一脚，窃取了信息或者修改了请求等。
 
-![image-20210905145019218](https://gitee.com/Olivivian/PicGoImages/raw/master/img//Typora/typora-user-images/2021/09/05/image-20210905145019218.png)
+![image-20210905145019218](https://imgstorage-1313684358.cos.ap-nanjing.myqcloud.com//Typora/typora-user-images/2021/09/05/image-20210905145019218.png)
 
 
 

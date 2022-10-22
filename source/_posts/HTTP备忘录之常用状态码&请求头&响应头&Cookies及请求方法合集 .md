@@ -4,7 +4,7 @@ date:
 tags: HTTP
 categories: 前端
 photos:
-  - https://gitee.com/Olivivian/PicGoImages/raw/master/img//00%E8%B5%84%E6%96%99/00juejincundang/2021/10/02/%7D-L7%7B-I-U-XCJMM2W-FIF.png
+  - https://imgstorage-1313684358.cos.ap-nanjing.myqcloud.com//00%E8%B5%84%E6%96%99/00juejincundang/2021/10/02/%7D-L7%7B-I-U-XCJMM2W-FIF.png
 ---
 
 <br/>
@@ -14,7 +14,7 @@ HTTPS和HTTP相比多了一层加密
 
 
 
-![image-20211002153855635](https://gitee.com/Olivivian/PicGoImages/raw/master/img//Typora/typora-user-images/2021/10/02/image-20211002153855635.png)
+![image-20211002153855635](https://imgstorage-1313684358.cos.ap-nanjing.myqcloud.com//Typora/typora-user-images/2021/10/02/image-20211002153855635.png)
 
 
 <br/>
@@ -34,7 +34,7 @@ HTTPS和HTTP相比多了一层加密
 
 **504** 👉	 Gateway Timeout-网关或者代理的服务器无法在规定的时间内获得想要的响应。
 
-![image-20210920192949824](https://gitee.com/Olivivian/PicGoImages/raw/master/img//Typora/typora-user-images/2021/09/20/image-20210920192949824.png)
+![image-20210920192949824](https://imgstorage-1313684358.cos.ap-nanjing.myqcloud.com//Typora/typora-user-images/2021/09/20/image-20210920192949824.png)
 
 
 <br/>
@@ -43,19 +43,19 @@ HTTPS和HTTP相比多了一层加密
 **Accept**：
  接收类型，表示浏览器支持的MIME类型（对标服务端返回的Content-Type）
 
-![image-20211002161729473](https://gitee.com/Olivivian/PicGoImages/raw/master/img//Typora/typora-user-images/2021/10/02/image-20211002161729473.png)
+![image-20211002161729473](https://imgstorage-1313684358.cos.ap-nanjing.myqcloud.com//Typora/typora-user-images/2021/10/02/image-20211002161729473.png)
 
 
 
 **Content-Type**：
 客户端发送出去实体内容的类型
 
-![image-20211002161801679](https://gitee.com/Olivivian/PicGoImages/raw/master/img//Typora/typora-user-images/2021/10/02/image-20211002161801679.png)
+![image-20211002161801679](https://imgstorage-1313684358.cos.ap-nanjing.myqcloud.com//Typora/typora-user-images/2021/10/02/image-20211002161801679.png)
 
 **Cache-Control**：
 指定请求和响应遵循的缓存机制，如no-cache
 
-![image-20211002163255317](https://gitee.com/Olivivian/PicGoImages/raw/master/img//Typora/typora-user-images/2021/10/02/image-20211002163255317.png)
+![image-20211002163255317](https://imgstorage-1313684358.cos.ap-nanjing.myqcloud.com//Typora/typora-user-images/2021/10/02/image-20211002163255317.png)
 
 **If-Modified-Since**：
  对应服务端的`Last-Modified`,用来匹配看文件是否变动，只能精确到1s之内
@@ -80,22 +80,22 @@ HTTPS和HTTP相比多了一层加密
 **Cookie**：
  有cookie并且**同域**访问时会自动带上
 
-![image-20211002155443610](https://gitee.com/Olivivian/PicGoImages/raw/master/img//Typora/typora-user-images/2021/10/02/image-20211002155443610.png)
+![image-20211002155443610](https://imgstorage-1313684358.cos.ap-nanjing.myqcloud.com//Typora/typora-user-images/2021/10/02/image-20211002155443610.png)
 
 **Referer**：
 该页面的来源URL（适用于所有类型的请求，会精确到详细页面地址，csrf拦截常用到这个字段）
 
-![image-20211002161835593](https://gitee.com/Olivivian/PicGoImages/raw/master/img//Typora/typora-user-images/2021/10/02/image-20211002161835593.png)
+![image-20211002161835593](https://imgstorage-1313684358.cos.ap-nanjing.myqcloud.com//Typora/typora-user-images/2021/10/02/image-20211002161835593.png)
 
 **Origin**：
 最初的请求是从哪里发起的（只会精确到端口)）,Origin比Referer更尊重隐私
 
-![image-20211002161858626](https://gitee.com/Olivivian/PicGoImages/raw/master/img//Typora/typora-user-images/2021/10/02/image-20211002161858626.png)
+![image-20211002161858626](https://imgstorage-1313684358.cos.ap-nanjing.myqcloud.com//Typora/typora-user-images/2021/10/02/image-20211002161858626.png)
 
 **User-Agent**：
  用户客户端的一些必要信息，如UA头部等
 
-![image-20211002155948600](https://gitee.com/Olivivian/PicGoImages/raw/master/img//Typora/typora-user-images/2021/10/02/image-20211002155948600.png)
+![image-20211002155948600](https://imgstorage-1313684358.cos.ap-nanjing.myqcloud.com//Typora/typora-user-images/2021/10/02/image-20211002155948600.png)
 
 # HTTP常用响应头（Response Headers）
 
@@ -107,7 +107,7 @@ HTTPS和HTTP相比多了一层加密
 **Cache-Control**：
 指定请求和响应遵循的缓存机制，如no-cache
 
-![image-20211002163336562](https://gitee.com/Olivivian/PicGoImages/raw/master/img//Typora/typora-user-images/2021/10/02/image-20211002163336562.png)
+![image-20211002163336562](https://imgstorage-1313684358.cos.ap-nanjing.myqcloud.com//Typora/typora-user-images/2021/10/02/image-20211002163336562.png)
 
 **Last-Modified**：
 
@@ -118,7 +118,7 @@ HTTPS和HTTP相比多了一层加密
 **Expires**：
 应该在什么时候认为文档已经过期，从而不再缓存它
 
-![image-20211002163349623](https://gitee.com/Olivivian/PicGoImages/raw/master/img//Typora/typora-user-images/2021/10/02/image-20211002163349623.png)
+![image-20211002163349623](https://imgstorage-1313684358.cos.ap-nanjing.myqcloud.com//Typora/typora-user-images/2021/10/02/image-20211002163349623.png)
 
 **Max-age**：
  客户端的本地资源应该缓存多少秒，开启了	Cache-Control	后有效
@@ -138,7 +138,7 @@ HTTPS和HTTP相比多了一层加密
 **Server**：
 服务器的一些相关信息
 
-![image-20211002160637134](https://gitee.com/Olivivian/PicGoImages/raw/master/img//Typora/typora-user-images/2021/10/02/image-20211002160637134.png)
+![image-20211002160637134](https://imgstorage-1313684358.cos.ap-nanjing.myqcloud.com//Typora/typora-user-images/2021/10/02/image-20211002160637134.png)
 
 **Access-Control-Allow-Origin**：
  服务器端允许的请求Origin头部(譬如为*)
@@ -205,7 +205,7 @@ HTTPS和HTTP相比多了一层加密
 <br/>
 # HTTP的缓存
 
-![image-20210920225414298](https://gitee.com/Olivivian/PicGoImages/raw/master/img//Typora/typora-user-images/2021/09/20/image-20210920225414298.png)
+![image-20210920225414298](https://imgstorage-1313684358.cos.ap-nanjing.myqcloud.com//Typora/typora-user-images/2021/09/20/image-20210920225414298.png)
 
 ## 强缓存
 

@@ -5,7 +5,7 @@ date:
 tags: CSS
 categories: 前端
 photos:
-  - https://gitee.com/Olivivian/PicGoImages/raw/master/img//00juejincundang/封面/2021/10/02/FOYQ-BTYFD_84%VNH5-9-CG.png
+  - https://imgstorage-1313684358.cos.ap-nanjing.myqcloud.com//00juejincundang/封面/2021/10/02/FOYQ-BTYFD_84%VNH5-9-CG.png
 
 ---
 
@@ -29,7 +29,7 @@ CSS,层叠样式表(cascading syle sheets)，-种用来为结构化文档(基本
 
 举例来说，要选择一个HTML页面里所有的段落元素，然后将其中的文本改成红色，可以这样写CSS
 
-![image-20210815202724354](https://gitee.com/Olivivian/PicGoImages/raw/master/img//Typora/typora-user-images/2021/08/16/image-20210815202724354.png)
+![image-20210815202724354](https://imgstorage-1313684358.cos.ap-nanjing.myqcloud.com//Typora/typora-user-images/2021/08/16/image-20210815202724354.png)
 
 
 
@@ -48,14 +48,14 @@ CSS,层叠样式表(cascading syle sheets)，-种用来为结构化文档(基本
 ## CSS诞生背景
 在没有css以前，所有样式都混在html里。假如一个标题要用斜体字、红色的字符、白色的底色的话，要这样写:
 
-![image-20210815203234600](https://gitee.com/Olivivian/PicGoImages/raw/master/img//Typora/typora-user-images/2021/08/15/image-20210815203234600.png)
+![image-20210815203234600](https://imgstorage-1313684358.cos.ap-nanjing.myqcloud.com//Typora/typora-user-images/2021/08/15/image-20210815203234600.png)
 
 
 
 
 有了CSS之后，样式就可以和文章结构分离了。
 
-![image-20210815203729298](https://gitee.com/Olivivian/PicGoImages/raw/master/img//Typora/typora-user-images/2021/08/15/image-20210815203729298.png)
+![image-20210815203729298](https://imgstorage-1313684358.cos.ap-nanjing.myqcloud.com//Typora/typora-user-images/2021/08/15/image-20210815203729298.png)
 
 
 
@@ -63,7 +63,7 @@ CSS,层叠样式表(cascading syle sheets)，-种用来为结构化文档(基本
 
 上面例子里，css语法一样可以合在html里写。
 
-![image-20210815203842675](https://gitee.com/Olivivian/PicGoImages/raw/master/img//Typora/typora-user-images/2021/08/15/image-20210815203842675.png)
+![image-20210815203842675](https://imgstorage-1313684358.cos.ap-nanjing.myqcloud.com//Typora/typora-user-images/2021/08/15/image-20210815203842675.png)
 
 
 
@@ -74,7 +74,7 @@ CSS,层叠样式表(cascading syle sheets)，-种用来为结构化文档(基本
 让我们来仔细CSS的结构
 整个结构称为规则集(通常简称“规则”)，各部分释义如下:
 
-![image-20210815204238678](https://gitee.com/Olivivian/PicGoImages/raw/master/img//Typora/typora-user-images/2021/08/15/image-20210815204238678.png)
+![image-20210815204238678](https://imgstorage-1313684358.cos.ap-nanjing.myqcloud.com//Typora/typora-user-images/2021/08/15/image-20210815204238678.png)
 
 - 选择器:选择了个或多个需要添加样式的元素(在这个例子中就是p元素)
 - 声明：一个单独的规则，如color: red;用来指定添加样式元素的属性。
@@ -94,7 +94,7 @@ CSS,层叠样式表(cascading syle sheets)，-种用来为结构化文档(基本
 - 如果要同时修改多个属性，只需要将它们用分号隔开
 - 也可以选择多种类型的元素并为它们添加一组相同的样式。将不同的选择器用逗号分开
 
-![image-20210815204639398](https://gitee.com/Olivivian/PicGoImages/raw/master/img//Typora/typora-user-images/2021/08/15/image-20210815204639398.png)
+![image-20210815204639398](https://imgstorage-1313684358.cos.ap-nanjing.myqcloud.com//Typora/typora-user-images/2021/08/15/image-20210815204639398.png)
 
 ## 选择器
 
@@ -122,7 +122,7 @@ CSS代表层叠样式表(Cascadjing Style Sheets)，理解第一个词cascading�
 
 - 这些规则有相同的优先级，但顺序在最后的生效。
 
-![image-20210815205856519](https://gitee.com/Olivivian/PicGoImages/raw/master/img//Typora/typora-user-images/2021/08/15/image-20210815205856519.png)
+![image-20210815205856519](https://imgstorage-1313684358.cos.ap-nanjing.myqcloud.com//Typora/typora-user-images/2021/08/15/image-20210815205856519.png)
 
 
 
@@ -136,7 +136,7 @@ CSS代表层叠样式表(Cascadjing Style Sheets)，理解第一个词cascading�
 
   下面的h1最后会显示绿色
 
-  ![image-20210815210331224](https://gitee.com/Olivivian/PicGoImages/raw/master/img//Typora/typora-user-images/2021/08/15/image-20210815210331224.png)
+  ![image-20210815210331224](https://imgstorage-1313684358.cos.ap-nanjing.myqcloud.com//Typora/typora-user-images/2021/08/15/image-20210815210331224.png)
 
 
 
@@ -146,7 +146,7 @@ CSS代表层叠样式表(Cascadjing Style Sheets)，理解第一个词cascading�
 
 如果你设置一个元素的color 和font- family，每个在里面的元素也都会有相同的属性值，除非你直接在元素上设置属性。
 
-![image-20210815210843425](https://gitee.com/Olivivian/PicGoImages/raw/master/img//Typora/typora-user-images/2021/08/15/image-20210815210843425.png)
+![image-20210815210843425](https://imgstorage-1313684358.cos.ap-nanjing.myqcloud.com//Typora/typora-user-images/2021/08/15/image-20210815210843425.png)
 
 这些概念一起来控制css规则应用于哪个元素;有时候会感觉有些复杂，但是当你对css有更多经验的时候，你就可以记住它们，即便忘记了细节，可以在网上查到。
 
@@ -156,7 +156,7 @@ CSS代表层叠样式表(Cascadjing Style Sheets)，理解第一个词cascading�
 
 【颜色】和【字体加粗】都被继承了；【边框border】 就没有(不然每个子元素都有框框得多丑)，说明浏览器会根据常识判断哪些属性该被继承；
 
-![image-20210815212610017](https://gitee.com/Olivivian/PicGoImages/raw/master/img//Typora/typora-user-images/2021/08/15/image-20210815212610017.png)
+![image-20210815212610017](https://imgstorage-1313684358.cos.ap-nanjing.myqcloud.com//Typora/typora-user-images/2021/08/15/image-20210815212610017.png)
 
 
 

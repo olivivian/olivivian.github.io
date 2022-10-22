@@ -4,7 +4,7 @@ date:
 tags: HTTP
 categories: 前端
 photos:
-  - https://gitee.com/Olivivian/PicGoImages/raw/master/img//00juejincundang/%E5%B0%81%E9%9D%A2/2021/10/02/DIK%609H%7D2QD%7B25I-T%7B8_YC_M.png
+  - https://imgstorage-1313684358.cos.ap-nanjing.myqcloud.com//00juejincundang/%E5%B0%81%E9%9D%A2/2021/10/02/DIK%609H%7D2QD%7B25I-T%7B8_YC_M.png
 ---
 
 
@@ -68,13 +68,13 @@ HTML(HyperText Markup Language,超文本标记语言),用于构建网页基本�
 
 - 元素可以拥有属性,属性包含有元素的额外信息
 
-  ![image-20210815132516080](https://gitee.com/Olivivian/PicGoImages/raw/master/img//Typora/typora-user-images/2021/08/15/image-20210815132516080.png)
+  ![image-20210815132516080](https://imgstorage-1313684358.cos.ap-nanjing.myqcloud.com//Typora/typora-user-images/2021/08/15/image-20210815132516080.png)
 
 
 
 ## 基本结构
 
-![image-20210815132441283](https://gitee.com/Olivivian/PicGoImages/raw/master/img//Typora/typora-user-images/2021/08/15/image-20210815132441283.png)
+![image-20210815132441283](https://imgstorage-1313684358.cos.ap-nanjing.myqcloud.com//Typora/typora-user-images/2021/08/15/image-20210815132441283.png)
 
 ```
 <!DOCTYPE html>:放在HTML文档最前面的位置，加上之后就会按照W3C的HTML 5标准来解析渲染页面
@@ -150,7 +150,7 @@ script
 - defer：立即下载， 延迟执行，表示脚本可以等到dom被完全解析和显示之后在执行，只对外部脚本有效。有defer属性的脚本会阻止DOMContentL oaded事件，直到脚本被加载并且解析完成。
 - async: 立即下载脚本， 不妨碍其他操作，比如下载其他资源或载其他脚本， 只对外部脚本有效
 
-![image-20210815134347111](https://gitee.com/Olivivian/PicGoImages/raw/master/img//Typora/typora-user-images/2021/08/15/image-20210815134347111.png)
+![image-20210815134347111](https://imgstorage-1313684358.cos.ap-nanjing.myqcloud.com//Typora/typora-user-images/2021/08/15/image-20210815134347111.png)
 
 ### body
 
@@ -186,7 +186,7 @@ script
 
 根据内容的结构，选择合适的标签构建出便于开发者阅读的可维护性更高的代码结构，同时能够让机器**更好地解析**。
 
-![image-20210815135522740](https://gitee.com/Olivivian/PicGoImages/raw/master/img//Typora/typora-user-images/2021/08/15/image-20210815135522740.png)
+![image-20210815135522740](https://imgstorage-1313684358.cos.ap-nanjing.myqcloud.com//Typora/typora-user-images/2021/08/15/image-20210815135522740.png)
 
 语义化—区块
 
@@ -199,7 +199,7 @@ header
 - 不能放在<footer>、<address> 或者另一个<header>元素内部
 ```
 
-![image-20210815140113980](https://gitee.com/Olivivian/PicGoImages/raw/master/img//Typora/typora-user-images/2021/08/15/image-20210815140113980.png)
+![image-20210815140113980](https://imgstorage-1313684358.cos.ap-nanjing.myqcloud.com//Typora/typora-user-images/2021/08/15/image-20210815140113980.png)
 
 nav
 
@@ -209,7 +209,7 @@ nav
 - 用来放置一些热门的链接，不常用的链接通常放到footer里置于底部
 ```
 
-![image-20210815140125293](https://gitee.com/Olivivian/PicGoImages/raw/master/img//Typora/typora-user-images/2021/08/15/image-20210815140125293.png)
+![image-20210815140125293](https://imgstorage-1313684358.cos.ap-nanjing.myqcloud.com//Typora/typora-user-images/2021/08/15/image-20210815140125293.png)
 
 article
 
@@ -219,7 +219,7 @@ article
 - 可独立分配的或可复用的结构，如论坛帖子、新闻文章、博客、用户提交的评论、交互式组件等
 ```
 
-![image-20210815140346733](https://gitee.com/Olivivian/PicGoImages/raw/master/img//Typora/typora-user-images/2021/08/15/image-20210815140346733.png)
+![image-20210815140346733](https://imgstorage-1313684358.cos.ap-nanjing.myqcloud.com//Typora/typora-user-images/2021/08/15/image-20210815140346733.png)
 
 section
 
@@ -241,7 +241,7 @@ aside
 - 通常放在侧边栏，用于展示广告、tips、 引用内容等
 ```
 
-![image-20210815140821979](https://gitee.com/Olivivian/PicGoImages/raw/master/img//Typora/typora-user-images/2021/08/15/image-20210815140821979.png)
+![image-20210815140821979](https://imgstorage-1313684358.cos.ap-nanjing.myqcloud.com//Typora/typora-user-images/2021/08/15/image-20210815140821979.png)
 
 footer
 
@@ -252,13 +252,13 @@ footer
 - footer内的元素不属于章节内容，不包含在大纲中
 ```
 
-![image-20210815140922261](https://gitee.com/Olivivian/PicGoImages/raw/master/img//Typora/typora-user-images/2021/08/15/image-20210815140922261.png)
+![image-20210815140922261](https://imgstorage-1313684358.cos.ap-nanjing.myqcloud.com//Typora/typora-user-images/2021/08/15/image-20210815140922261.png)
 
 
 
 可以看看[MDN](https://developer.mozilla.org/zh-CN/docs/Learn)这个页面的语义化
 
-![image-20210815141309105](https://gitee.com/Olivivian/PicGoImages/raw/master/img//Typora/typora-user-images/2021/08/15/image-20210815141309105.png)
+![image-20210815141309105](https://imgstorage-1313684358.cos.ap-nanjing.myqcloud.com//Typora/typora-user-images/2021/08/15/image-20210815141309105.png)
 
 
 
@@ -272,7 +272,7 @@ figure、figcaption
 - <figcaption>与其相关联的图表的说明/标题，通常位于<figure>的第一个或最后一一个
 ```
 
-![image-20210815141745515](https://gitee.com/Olivivian/PicGoImages/raw/master/img//Typora/typora-user-images/2021/08/15/image-20210815141745515.png)
+![image-20210815141745515](https://imgstorage-1313684358.cos.ap-nanjing.myqcloud.com//Typora/typora-user-images/2021/08/15/image-20210815141745515.png)
 
 blockquote
 
@@ -282,7 +282,7 @@ blockquote
 - cite属性表示该来源的url
 ```
 
-![image-20210815141937538](https://gitee.com/Olivivian/PicGoImages/raw/master/img//Typora/typora-user-images/2021/08/15/image-20210815141937538.png)
+![image-20210815141937538](https://imgstorage-1313684358.cos.ap-nanjing.myqcloud.com//Typora/typora-user-images/2021/08/15/image-20210815141937538.png)
 
 dl、dt、dd
 
@@ -292,7 +292,7 @@ dl、dt、dd
 - 通常用于元数据、术语定义等场景
 ```
 
-![image-20210815142110423](https://gitee.com/Olivivian/PicGoImages/raw/master/img//Typora/typora-user-images/2021/08/15/image-20210815142110423.png)
+![image-20210815142110423](https://imgstorage-1313684358.cos.ap-nanjing.myqcloud.com//Typora/typora-user-images/2021/08/15/image-20210815142110423.png)
 
 
 
@@ -349,7 +349,7 @@ picture
 - media属性:依据的媒体条件渲染相应的图片，类似媒体查询
 - type属性: MIME类型，根据浏览器支持性渲染相应的图片
 
-![image-20210815142723085](https://gitee.com/Olivivian/PicGoImages/raw/master/img//Typora/typora-user-images/2021/08/15/image-20210815142723085.png)
+![image-20210815142723085](https://imgstorage-1313684358.cos.ap-nanjing.myqcloud.com//Typora/typora-user-images/2021/08/15/image-20210815142723085.png)
 
 
 
@@ -364,7 +364,7 @@ video
 
 
 
-![image-20210815143258998](https://gitee.com/Olivivian/PicGoImages/raw/master/img//Typora/typora-user-images/2021/08/15/image-20210815143258998.png)
+![image-20210815143258998](https://imgstorage-1313684358.cos.ap-nanjing.myqcloud.com//Typora/typora-user-images/2021/08/15/image-20210815143258998.png)
 
 
 
@@ -380,7 +380,7 @@ DOM(文档对象模型)：对节点结构化表述，并定义了一种方式可
 - 布局计算
 - 绘制
 
-![image-20210815150252169](https://gitee.com/Olivivian/PicGoImages/raw/master/img//Typora/typora-user-images/2021/08/15/image-20210815150252169.png)
+![image-20210815150252169](https://imgstorage-1313684358.cos.ap-nanjing.myqcloud.com//Typora/typora-user-images/2021/08/15/image-20210815150252169.png)
 
 
 
