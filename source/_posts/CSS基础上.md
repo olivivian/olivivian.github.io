@@ -1,12 +1,11 @@
 
 ---
-title: CSS基础上
-date: 
+title: 
+date: 2021-08-16 21:04
 tags: CSS
 categories: 前端
-photos:
-  - https://imgstorage-1313684358.cos.ap-nanjing.myqcloud.com//00juejincundang/封面/2021/10/02/FOYQ-BTYFD_84%VNH5-9-CG.png
-
+img: https://imgstorage-1313684358.cos.ap-nanjing.myqcloud.com/00juejincundang%2F%E5%B0%81%E9%9D%A2%2F2021%2F10%2F02%2FFOYQ-BTYFD_84%25VNH5-9-CG.png
+summary: CSS是什么？怎么学？
 ---
 
 

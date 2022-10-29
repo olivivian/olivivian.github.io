@@ -1,11 +1,11 @@
 
 ---
-title: CSS基础下
-date: 
+title: 
+date: 2021-08-17 21:04
 tags: CSS
 categories: 前端
-photos:
-  - https://imgstorage-1313684358.cos.ap-nanjing.myqcloud.com//00juejincundang/%E5%B0%81%E9%9D%A2/2021/10/02/UYW-B-0FT-RMU-9-G-OODSQ.png
+img: https://imgstorage-1313684358.cos.ap-nanjing.myqcloud.com//00juejincundang/%E5%B0%81%E9%9D%A2/2021/10/02/UYW-B-0FT-RMU-9-G-OODSQ.png
+summary: 盒模型、文档流、布局、定位、装饰领域
 ---
 
 

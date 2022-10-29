@@ -1,13 +1,14 @@
 ---
-title: HTTP备忘录之常用状态码&请求头&响应头&Cookies及请求方法合集
-date: 
+title: ''
+date: 2021-10-02 17:46:00
 tags: HTTP
 categories: 前端
-photos:
-  - https://imgstorage-1313684358.cos.ap-nanjing.myqcloud.com//00%E8%B5%84%E6%96%99/00juejincundang/2021/10/02/%7D-L7%7B-I-U-XCJMM2W-FIF.png
+img: https://imgstorage-1313684358.cos.ap-nanjing.myqcloud.com//00%E8%B5%84%E6%96%99/00juejincundang/2021/10/02/%7D-L7%7B-I-U-XCJMM2W-FIF.png
+summary: HTTP的状态码、请求头、响应头、Cookies及请求方法合集
 ---
 
 <br/>
+
 # HTTP和HTTPS的区别图解
 
 HTTPS和HTTP相比多了一层加密
@@ -18,6 +19,7 @@ HTTPS和HTTP相比多了一层加密
 
 
 <br/>
+
 # HTTP的常用状态码
 
 **200**	 👉	OK，客户端请求成功
@@ -38,6 +40,7 @@ HTTPS和HTTP相比多了一层加密
 
 
 <br/>
+
 # HTTP常用请求头（Request Headers）
 
 **Accept**：
@@ -147,6 +150,7 @@ HTTPS和HTTP相比多了一层加密
 
 
 <br/>
+
 # HTTP的各类请求方法
 
 **GET**：		 
@@ -203,6 +207,7 @@ HTTPS和HTTP相比多了一层加密
 
 
 <br/>
+
 # HTTP的缓存
 
 ![image-20210920225414298](https://imgstorage-1313684358.cos.ap-nanjing.myqcloud.com//Typora/typora-user-images/2021/09/20/image-20210920225414298.png)
@@ -228,6 +233,7 @@ HTTPS和HTTP相比多了一层加密
 
 
 <br/>
+
 # 视频直播协议
 
 
@@ -240,6 +246,7 @@ HTTPS和HTTP相比多了一层加密
 
 
 <br/>
+
 # Cookie
 
 Set-Cookie - response

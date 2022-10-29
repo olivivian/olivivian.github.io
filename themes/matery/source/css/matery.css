@@ -916,6 +916,7 @@ article .article-content .summary {
     padding-left: 0;
     margin-bottom: 6px;
     word-break: break-all;
+    font-weight: 600;/*自定义*/
 }
 
 article .article-content .publish-author {
