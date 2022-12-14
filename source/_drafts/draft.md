@@ -1,4 +1,8 @@
 ---
-title: draft
-tags:
+title: 
+date: 
+tags: 
+categories: 
+img: 
+summary: 
 ---
