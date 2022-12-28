@@ -4,7 +4,7 @@ date:
 tags: Git
 categories: 工具
 img: 
-summary: 
+summary: git问题解决方案汇总
 ---
 
 # 更换网络，git代码提交报错

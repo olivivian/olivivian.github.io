@@ -3,7 +3,7 @@ title: ''
 date: 2021-10-02 17:46:00
 tags: HTTP
 categories: 前端
-img: https://imgstorage-1313684358.cos.ap-nanjing.myqcloud.com//00%E8%B5%84%E6%96%99/00juejincundang/2021/10/02/%7D-L7%7B-I-U-XCJMM2W-FIF.png
+img: https://imgstorage-1313684358.cos.ap-nanjing.myqcloud.com/hexo/7.jpg
 summary: HTTP的状态码、请求头、响应头、Cookies及请求方法合集
 ---
 

@@ -3,7 +3,7 @@ title:
 date: 2021-09-06 00:40
 tags: web安全
 categories: 前端
-img: https://imgstorage-1313684358.cos.ap-nanjing.myqcloud.com//00%E8%B5%84%E6%96%99/00juejincundang/2021/09/05/%7B0AK-BBO2I-GBT%7BZJLNXVXB.png
+img: https://imgstorage-1313684358.cos.ap-nanjing.myqcloud.com/hexo/12.jpg
 summary: web开发安全之网站都是怎么被攻击的？
 ---
 
