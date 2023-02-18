@@ -3,6 +3,7 @@ title: Hexo+github pages博客搭建
 date: 2017-08-12 20:14:33
 tags: Hexo
 categories: 工具
+img: https://imgstorage-1313684358.cos.ap-nanjing.myqcloud.com/hexo/10.jpg
 summary: 非常偷懒的一个教程，后面有空完善一下
 ---
  ![配图](Hexo-github-pages博客搭建/03.jpg)

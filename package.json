@@ -8,6 +8,10 @@
   "resolutions": {
     "stylus": "^0.54.8"
   },
+  "scripts": {
+    "dev": "hexo g && hexo s",
+    "build:prod": "hexo clean && hexo g -d"
+  },
   "dependencies": {
     "hexo": "^6.3.0",
     "hexo-asset-image": "git+https://github.com/CodeFalling/hexo-asset-image.git",

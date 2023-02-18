@@ -4,7 +4,7 @@ date: 2021-10-06
 tags: 小程序
 categories: 前端
 img: https://imgstorage-1313684358.cos.ap-nanjing.myqcloud.com/hexo/25.jpg
-summary: 
+summary: 小程序自定义组件Component
 top: true
 ---
 
